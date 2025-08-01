@@ -14,36 +14,15 @@ namespace Survivor
         private const int LayerMask = 1 << 10;
         
         [SerializeField]
-        private float _radius;
+        private float _acceleration;
         [SerializeField]
         private float _speed;
+        [SerializeField]
+        private Rigidbody2D _rigidbody;
 
-        public Vector2 Move(Vector2 position, Vector2 direction, float deltaTime)
+        public void Move(Vector2 movementVector, float deltaTime)
         {
-            var distance = _speed * deltaTime;
-            
-            var hit = Physics2D.CircleCast(position, _radius, direction, distance + Bias, LayerMask);
-
-            if (hit.transform == null)
-            {
-                return position + direction * distance;
-            }
-
-            position += direction * (hit.distance - Bias);
-            direction += Vector2.Dot(direction, hit.normal) * hit.normal;
-            direction.Normalize();
-            distance -= hit.distance - Bias;
-            
-            hit = Physics2D.CircleCast(position, _radius, direction, distance + Bias, LayerMask);
-
-            if (hit.transform == null)
-            {
-                return position + direction * distance;
-            }
-            
-            position += direction * (hit.distance - Bias);
-
-            return position;
+            _rigidbody.velocity = Vector2.MoveTowards(_rigidbody.velocity, movementVector * _speed, _acceleration * deltaTime);
         }
     }
 }

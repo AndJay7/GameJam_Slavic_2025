@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using Random = UnityEngine.Random;
 
 namespace Survivor
@@ -12,11 +13,23 @@ namespace Survivor
         [SerializeField]
         private Movement _movement;
 
-        private void Update()
+        private void FixedUpdate()
         {
-            var movementDirection = Vector2.zero;
+            var movementVector = Vector2.zero;
+
+            if (Keyboard.current.wKey.isPressed)
+                movementVector += Vector2.up;
+            if (Keyboard.current.sKey.isPressed)
+                movementVector -= Vector2.up;
+            if (Keyboard.current.dKey.isPressed)
+                movementVector += Vector2.right;
+            if (Keyboard.current.aKey.isPressed)
+                movementVector -= Vector2.right;
+
+            if(movementVector.sqrMagnitude > 1f)
+                movementVector.Normalize();
             
-            
+            _movement.Move(movementVector, Time.fixedDeltaTime);
         }
     }
 }
