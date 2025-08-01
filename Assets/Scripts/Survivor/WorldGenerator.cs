@@ -12,6 +12,42 @@ namespace Survivor
 {
     public class WorldGenerator : MonoBehaviour
     {
+        [Serializable]
+        private class Biome
+        {
+            [SerializeField]
+            private FastNoiseExtension _noise;
+            [SerializeField]
+            private Vector2 _noiseRemap;
+            [SerializeField]
+            private Tile[] _tiles;
+
+            private FastNoise _noiseLibInstance;
+            private float _tilesTotalWeight;
+
+            public Tile[] Tiles => _tiles;
+            public float TilesTotalWeight => _tilesTotalWeight;
+
+            public void Initialize()
+            {
+                _noiseLibInstance = _noise.GetLibInstance(Random.Range(00, 16777216));
+            
+                Array.Sort(_tiles, (a, b) => b.Weight.CompareTo(a.Weight));
+
+                _tilesTotalWeight = 0f;
+                foreach (var tile in _tiles)
+                {
+                    _tilesTotalWeight += tile.Weight;
+                }
+            }
+            
+            public float GetWeight(Vector2 position)
+            {
+                var noise = _noiseLibInstance.GetNoise(position.x, position.y);
+                return _noiseRemap.x + noise * (_noiseRemap.y - _noiseRemap.x);
+            }
+        }
+        
         [SerializeField]
         private int _generateRadius;
         [SerializeField]
@@ -21,9 +57,7 @@ namespace Survivor
         [SerializeField]
         private int _gridSize;
         [SerializeField]
-        private Tile[] _tiles;
-
-        private float _tilesTotalWeight;
+        private Biome[] _biomes;
 
         private Dictionary<int2, (Tile tile, RectInt rect)> _tileMap = new();
         private List<(Tile tile, RectInt rect)> _tileInstances = new();
@@ -32,17 +66,17 @@ namespace Survivor
         
         private void OnValidate()
         {
-            Array.Sort(_tiles, (a, b) => a.name.CompareTo(b.name));
+            foreach (var biome in _biomes)
+            {
+                Array.Sort(biome.Tiles, (a, b) => a.name.CompareTo(b.name));
+            }
         }
 
         private void OnEnable()
         {
-            Array.Sort(_tiles, (a, b) => b.Weight.CompareTo(a.Weight));
-            
-            _tilesTotalWeight = 0f;
-            foreach (var tile in _tiles)
+            foreach (var biome in _biomes)
             {
-                _tilesTotalWeight += tile.Weight;
+                biome.Initialize();
             }
         }
 
@@ -102,21 +136,34 @@ namespace Survivor
             if (_tileMap.ContainsKey(position))
                 return;
 
+            var pickBiomeWeight = float.MinValue;
+            var pickBiome = _biomes[0];
+            foreach (var biome in _biomes)
+            {
+                var weight = biome.GetWeight((Vector2)(float2)position * _gridSize);
+
+                if (weight > pickBiomeWeight)
+                {
+                    pickBiomeWeight = weight;
+                    pickBiome = biome;
+                }
+            }
+
             var expandSign = Sign(position - center);
 
-            var pickWeight = Random.Range(0f, _tilesTotalWeight);
-            var pickIndex = 0;
-            var pickTile = _tiles[pickIndex];
+            var pickTileWeight = Random.Range(0f, pickBiome.TilesTotalWeight);
+            var pickTileIndex = 0;
+            var pickTile = pickBiome.Tiles[pickTileIndex];
 
             var cumulativeWeight = 0f;
-            for (int i = 0; i < _tiles.Length; i++)
+            for (int i = 0; i < pickBiome.Tiles.Length; i++)
             {
-                cumulativeWeight += _tiles[i].Weight;
+                cumulativeWeight += pickBiome.Tiles[i].Weight;
 
-                if (cumulativeWeight >= pickWeight)
+                if (cumulativeWeight >= pickTileWeight)
                 {
-                    pickIndex = i;
-                    pickTile = _tiles[i];
+                    pickTileIndex = i;
+                    pickTile = pickBiome.Tiles[i];
                 }
             }
 
@@ -134,8 +181,8 @@ namespace Survivor
                 {
                     if (_tileMap.ContainsKey(new int2(x, y)))
                     {
-                        pickIndex--;
-                        pickTile = _tiles[pickIndex];
+                        pickTileIndex--;
+                        pickTile = pickBiome.Tiles[pickTileIndex];
                         goto PickAgain;
                     }
                 }
