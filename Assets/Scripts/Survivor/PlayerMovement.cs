@@ -10,6 +10,21 @@ namespace Survivor
 {
     public class PlayerMovement : MonoBehaviour
     {
+        public static PlayerMovement Instance { get; private set; }
+
+
+
+        public Vector2 Playerlocation;
+
+        private void Awake()
+        {
+
+            Instance = this;
+
+        }
+
+
+
         [SerializeField]
         private Movement _movement;
 
@@ -32,6 +47,8 @@ namespace Survivor
             _movement.Move(movementVector, Time.fixedDeltaTime);
 
             transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.y * 0.01f);
+
+            Playerlocation = transform.position;
         }
     }
 }
