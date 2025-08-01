@@ -128,8 +128,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 84
-      y: 4
+      x: 44
+      y: 82
       width: 38
       height: 37
     spriteID: de85495c76b795946ab5b1443539983c
@@ -140,7 +140,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 84, y: 4}
+    uvTransform: {x: 44, y: 82}
   - name: Ts1_GrassDetal_1
     originalName: 
     pivot: {x: 0.5217391, y: 0.4615385}
@@ -148,8 +148,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 84
-      y: 90
+      x: 4
+      y: 218
       width: 23
       height: 13
     spriteID: bb28e870625357f40b466c262d2fb287
@@ -160,7 +160,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 84, y: 90}
+    uvTransform: {x: 4, y: 218}
   - name: Ts1_GrassDetal_2
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -168,8 +168,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 71
-      y: 69
+      x: 68
+      y: 168
       width: 4
       height: 3
     spriteID: 4e2bfd42b7b62b94dbaa3c4f64a4adb2
@@ -180,7 +180,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 71, y: 69}
+    uvTransform: {x: 68, y: 168}
   - name: Ts1_GrassDetal_3
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -188,8 +188,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 115
-      y: 90
+      x: 117
+      y: 82
       width: 6
       height: 5
     spriteID: b0fe93d0470254c4e9dfb7f3dd91d0db
@@ -200,7 +200,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 115, y: 90}
+    uvTransform: {x: 117, y: 82}
   - name: Ts1_GrassDetal_4
     originalName: 
     pivot: {x: 0.5263158, y: 0.5555556}
@@ -208,8 +208,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 44
-      y: 69
+      x: 90
+      y: 105
       width: 19
       height: 9
     spriteID: 50f7edbfffb3fd04ab3243aa7cf753db
@@ -220,7 +220,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 44, y: 69}
+    uvTransform: {x: 90, y: 105}
   - name: Ts1_GrassDetal_5
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -228,8 +228,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 116
-      y: 111
+      x: 117
+      y: 105
       width: 6
       height: 6
     spriteID: 654a9def59525df4882c77546c3a46ca
@@ -240,7 +240,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 116, y: 111}
+    uvTransform: {x: 117, y: 105}
   - name: Ts1_GrassDetal_6
     originalName: 
     pivot: {x: 0.5263158, y: 0.6666667}
@@ -248,8 +248,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 75
+      x: 90
+      y: 82
       width: 19
       height: 15
     spriteID: 4ca87eb769d4fdd40aa56bee68985b44
@@ -260,7 +260,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 75}
+    uvTransform: {x: 90, y: 82}
   - name: Ts1_Bricks_1
     originalName: 
     pivot: {x: 0.5, y: 0.5151515}
@@ -268,8 +268,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 84
-      y: 49
+      x: 44
+      y: 127
       width: 40
       height: 33
     spriteID: 6e23838a739295d4e92cbd947c3d1a1a
@@ -280,7 +280,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 84, y: 49}
+    uvTransform: {x: 44, y: 127}
   - name: Ts1_BricksDetail_1
     originalName: 
     pivot: {x: 0.47368422, y: 0.5}
@@ -289,7 +289,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 44
-      y: 86
+      y: 192
       width: 19
       height: 8
     spriteID: 8eac6c425a4944c4ab03cd8432fc90f1
@@ -300,7 +300,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 44, y: 86}
+    uvTransform: {x: 44, y: 192}
   - name: Ts1_BricksDetail_2
     originalName: 
     pivot: {x: 0.5, y: 0.44444445}
@@ -308,8 +308,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 84
-      y: 111
+      x: 4
+      y: 239
       width: 24
       height: 9
     spriteID: 80cc58afd2c243d47876ba565c192d51
@@ -320,7 +320,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 84, y: 111}
+    uvTransform: {x: 4, y: 239}
   - name: Ts1_BricksDetail_3
     originalName: 
     pivot: {x: 0.5625, y: 0.625}
@@ -328,8 +328,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 98
+      x: 44
+      y: 168
       width: 16
       height: 16
     spriteID: f76e8d9921cc4814295fab6bf0f63f7c
@@ -340,7 +340,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 98}
+    uvTransform: {x: 44, y: 168}
   - name: Ts1_TreeDetail1
     originalName: 
     pivot: {x: 0.5, y: 0.03508772}
@@ -348,8 +348,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 44
-      y: 4
+      x: 4
+      y: 153
       width: 32
       height: 57
     spriteID: fdb6bc18431dad547b50304b302f88cd
@@ -360,7 +360,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 44, y: 4}
+    uvTransform: {x: 4, y: 153}
   - name: Ts1_TreeDetail2
     originalName: 
     pivot: {x: 0.5, y: 0.12698413}
@@ -369,10 +369,30 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 4
+      y: 82
       width: 32
       height: 63
     spriteID: 0dc9f7e3061867143b927e9a0b0c1cd6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 82}
+  - name: Ts1_Swamp_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 104
+      height: 70
+    spriteID: ed3344a2ddfa98945bfbd025e9991cc7
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -602,6 +622,23 @@ ScriptedImporter:
         width: 32
         height: 63
       spriteId: 0dc9f7e3061867143b927e9a0b0c1cd6
+    linkedCells: []
+    parentIndex: -1
+  - layerIndex: 13
+    guid: 1518468142
+    name: Ts1_Swamp_1
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Ts1_Swamp_1
+      frameIndex: 0
+      cellRect:
+        x: 12
+        y: 29
+        width: 104
+        height: 70
+      spriteId: ed3344a2ddfa98945bfbd025e9991cc7
     linkedCells: []
     parentIndex: -1
   platformSettings:
