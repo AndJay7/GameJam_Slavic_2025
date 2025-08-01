@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,13 +13,17 @@ public abstract class Ability
         _boosters.Add(booster);
     }
 
+    public void RemoveBooster(Booster booster)
+    {
+        _boosters.Remove(booster);
+    }
+
     public abstract void Activate();
 
     public abstract void Stop();
 
-    public void Clear()
+    public void RemoveAllBoosters()
     {
-        Stop();
         _boosters.Clear();
     }
 }

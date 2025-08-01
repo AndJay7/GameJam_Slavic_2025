@@ -6,13 +6,15 @@ using UnityEngine;
 public class Equipment
 {
     public event Action<Vector2Int> OnItemAdded;
-    public event Action<Vector2Int, Vector2Int> OnItemSwaped;
+    public event Action<Vector2Int, Vector2Int> OnItemSwapStart;
+    public event Action<Vector2Int, Vector2Int> OnItemSwapEnd;
     public event Action<Vector2Int> OnItemSelected;
+    public event Action<Vector2Int> OnItemDeselect;
     public event Action<Vector2Int> OnFocusChanged;
 
+    public Vector2Int SelectIndex => _selectionIndex;
     public Vector2Int FocusIndex => _focusIndex;
     public Vector2Int PreviousFocusIndex => _previousFocusIndex;
-    public ItemSlot[,] ItemSlots => _itemSlots;
 
     private const int _gridSize = 40;
     private readonly ItemSlot[,] _itemSlots = new ItemSlot[_gridSize, _gridSize];
@@ -42,6 +44,13 @@ public class Equipment
         OnItemSelected?.Invoke(_selectionIndex);
     }
 
+    public void Deselect()
+    {
+        var prevSelect = _selectionIndex;
+        _selectionIndex = new Vector2Int(-1, -1);
+        OnItemDeselect?.Invoke(prevSelect);
+    }
+
     public bool CanSwapItem()
     {
         return _selectionIndex != _focusIndex;
@@ -52,8 +61,9 @@ public class Equipment
         var startSlot = _itemSlots[_selectionIndex.x, _selectionIndex.y];
         var endSlot = _itemSlots[_focusIndex.x, _focusIndex.y];
 
+        OnItemSwapStart?.Invoke(_selectionIndex, _focusIndex);
         (startSlot.item, endSlot.item) = (endSlot.item, startSlot.item);
-        OnItemSwaped?.Invoke(_selectionIndex, _focusIndex);
+        OnItemSwapEnd?.Invoke(_selectionIndex, _focusIndex);
     }
 
     public bool CanAddItem()
@@ -67,4 +77,34 @@ public class Equipment
         OnItemAdded?.Invoke(_focusIndex);
     }
 
+    public List<Vector2Int> GetNeighbourIndexes(Vector2Int index)
+    {
+        var list = new List<Vector2Int>();
+
+        var newIndex = index + new Vector2Int(0, 1);
+        if (IsIndexValid(newIndex))
+            list.Add(newIndex);
+        newIndex = index + new Vector2Int(0, -1);
+        if (IsIndexValid(newIndex))
+            list.Add(newIndex);
+        newIndex = index + new Vector2Int(1, 0);
+        if (IsIndexValid(newIndex))
+            list.Add(newIndex);
+        newIndex = index + new Vector2Int(-1, 0);
+        if (IsIndexValid(newIndex))
+            list.Add(newIndex);
+        return list;
+    }
+
+    public bool IsIndexValid(Vector2Int index)
+    {
+        var minValid = index.x >= 0 && index.y >= 0;
+        var maxValid = index.x < _gridSize && index.y < _gridSize;
+        return minValid && maxValid;
+    }
+
+    public ItemSlot GetSlot(Vector2Int index)
+    {
+        return _itemSlots[index.x, index.y];
+    }
 }

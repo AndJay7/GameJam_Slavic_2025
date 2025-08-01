@@ -22,4 +22,9 @@ public class ItemsQueue
         OnItemRemoved?.Invoke(item);
         return item;
     }
+
+    public bool CanDequeue()
+    {
+        return Items.Count > 0;
+    }
 }
