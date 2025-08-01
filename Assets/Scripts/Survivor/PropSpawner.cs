@@ -10,6 +10,10 @@ namespace Survivor
     public class PropSpawner : MonoBehaviour
     {
         [SerializeField]
+        private bool _useChance;
+        [SerializeField]
+        private float _chance;
+        [SerializeField]
         private float2 _spawnArea;
         [SerializeField]
         private int2 _spawnCount;
@@ -20,6 +24,9 @@ namespace Survivor
 
         private void Start()
         {
+            if(_useChance && Random.Range(0f, 1f) >= _chance)
+                return;
+            
             var spawnCount = Random.Range(_spawnCount.x, _spawnCount.y);
 
             for (int i = 0; i < spawnCount; i++)

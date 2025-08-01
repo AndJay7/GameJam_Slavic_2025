@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4698534635657626880}
   - component: {fileID: 6851554876681173425}
   m_Layer: 0
-  m_Name: Ts1_GrassDetail_4
+  m_Name: Ts1_BricksDetail_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 1096477581
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1604220683901795333, guid: e0cd882c0a001be4abb12acbb98025cb, type: 3}
+  m_Sprite: {fileID: -2587355261315160341, guid: e0cd882c0a001be4abb12acbb98025cb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
