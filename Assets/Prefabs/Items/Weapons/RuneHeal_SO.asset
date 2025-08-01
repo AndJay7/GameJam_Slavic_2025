@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _item:
     _icon: {fileID: 0}
-    _name: 
-    _description: 
+    _name: Rune of Healing
+    _description: Periodically heal hero

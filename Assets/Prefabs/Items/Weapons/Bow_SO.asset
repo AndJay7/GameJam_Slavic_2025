@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _item:
     _icon: {fileID: 0}
-    _name: 
-    _description: 
+    _name: Bow
+    _description: Shoot arrows at monsters
