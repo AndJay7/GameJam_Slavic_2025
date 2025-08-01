@@ -1,0 +1,437 @@
+fileFormatVersion: 2
+guid: e0cd882c0a001be4abb12acbb98025cb
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 16
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 1
+    layerImportMode: 0
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 0
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 1
+    layerImportMode: 0
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 0
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 638896643723794660
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: Ts1_Grass_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5135135}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 38
+      height: 37
+    spriteID: de85495c76b795946ab5b1443539983c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: Ts1_GrassDetal_1
+    originalName: 
+    pivot: {x: 0.5217391, y: 0.4615385}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 49
+      width: 23
+      height: 13
+    spriteID: bb28e870625357f40b466c262d2fb287
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 49}
+  - name: Ts1_GrassDetal_2
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 50
+      y: 4
+      width: 4
+      height: 3
+    spriteID: 4e2bfd42b7b62b94dbaa3c4f64a4adb2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 50, y: 4}
+  - name: Ts1_GrassDetal_3
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 18
+      y: 110
+      width: 6
+      height: 5
+    spriteID: b0fe93d0470254c4e9dfb7f3dd91d0db
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 18, y: 110}
+  - name: Ts1_GrassDetal_4
+    originalName: 
+    pivot: {x: 0.5263158, y: 0.5555556}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 93
+      width: 19
+      height: 9
+    spriteID: 50f7edbfffb3fd04ab3243aa7cf753db
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 93}
+  - name: Ts1_GrassDetal_5
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 110
+      width: 6
+      height: 6
+    spriteID: 654a9def59525df4882c77546c3a46ca
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 110}
+  - name: Ts1_GrassDetal_6
+    originalName: 
+    pivot: {x: 0.5263158, y: 0.6666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 70
+      width: 19
+      height: 15
+    spriteID: 4ca87eb769d4fdd40aa56bee68985b44
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 70}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -972733589
+    name: Ts1_Grass_1
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Ts1_Grass_1
+      frameIndex: 0
+      cellRect:
+        x: 45
+        y: 45
+        width: 38
+        height: 37
+      spriteId: de85495c76b795946ab5b1443539983c
+    linkedCells: []
+    parentIndex: -1
+  - layerIndex: 1
+    guid: 1364201658
+    name: Ts1_GrassDetal_1
+    layerFlags: 2
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Ts1_GrassDetal_1
+      frameIndex: 0
+      cellRect:
+        x: 52
+        y: 58
+        width: 23
+        height: 13
+      spriteId: bb28e870625357f40b466c262d2fb287
+    linkedCells: []
+    parentIndex: -1
+  - layerIndex: 2
+    guid: 329268318
+    name: Ts1_GrassDetal_2
+    layerFlags: 2
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Ts1_GrassDetal_2
+      frameIndex: 0
+      cellRect:
+        x: 62
+        y: 64
+        width: 4
+        height: 3
+      spriteId: 4e2bfd42b7b62b94dbaa3c4f64a4adb2
+    linkedCells: []
+    parentIndex: -1
+  - layerIndex: 3
+    guid: -705665026
+    name: Ts1_GrassDetal_3
+    layerFlags: 2
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Ts1_GrassDetal_3
+      frameIndex: 0
+      cellRect:
+        x: 61
+        y: 64
+        width: 6
+        height: 5
+      spriteId: b0fe93d0470254c4e9dfb7f3dd91d0db
+    linkedCells: []
+    parentIndex: -1
+  - layerIndex: 4
+    guid: -2051066222
+    name: Ts1_GrassDetal_4
+    layerFlags: 2
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Ts1_GrassDetal_4
+      frameIndex: 0
+      cellRect:
+        x: 54
+        y: 59
+        width: 19
+        height: 9
+      spriteId: 50f7edbfffb3fd04ab3243aa7cf753db
+    linkedCells: []
+    parentIndex: -1
+  - layerIndex: 5
+    guid: 1208967730
+    name: Ts1_GrassDetal_5
+    layerFlags: 2
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Ts1_GrassDetal_5
+      frameIndex: 0
+      cellRect:
+        x: 61
+        y: 64
+        width: 6
+        height: 6
+      spriteId: 654a9def59525df4882c77546c3a46ca
+    linkedCells: []
+    parentIndex: -1
+  - layerIndex: 6
+    guid: 174034398
+    name: Ts1_GrassDetal_6
+    layerFlags: 2
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Ts1_GrassDetal_6
+      frameIndex: 0
+      cellRect:
+        x: 54
+        y: 54
+        width: 19
+        height: 15
+      spriteId: 4ca87eb769d4fdd40aa56bee68985b44
+    linkedCells: []
+    parentIndex: -1
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Android
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: WebGL
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 128, y: 128}
