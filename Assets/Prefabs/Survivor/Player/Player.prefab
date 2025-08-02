@@ -119,9 +119,9 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
+    x: 0.5
     y: 0
-    width: 1
+    width: 0.5
     height: 1
   near clip plane: -1000
   far clip plane: 1000
@@ -206,7 +206,7 @@ GameObject:
   - component: {fileID: 775719364864466504}
   - component: {fileID: 9044676806569625937}
   - component: {fileID: 1612094463353590466}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,7 +229,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 46.1674, y: -6.9279}
+  m_AnchoredPosition: {x: 46.16742, y: -6.9279}
   m_SizeDelta: {x: -50.9552, y: 18.4203}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &9044676806569625937
@@ -685,6 +685,18 @@ PrefabInstance:
     - target: {fileID: 8263040991239959348, guid: 567923829add2104a926484c3ce7f6b5, type: 3}
       propertyPath: m_Name
       value: Survivor UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894117609350515805, guid: 567923829add2104a926484c3ce7f6b5, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 4606089335807521329}
+    - target: {fileID: 8894117609350515805, guid: 567923829add2104a926484c3ce7f6b5, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894117609350515805, guid: 567923829add2104a926484c3ce7f6b5, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1448145257
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

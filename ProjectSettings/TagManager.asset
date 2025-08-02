@@ -45,6 +45,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: UI_Right
+    uniqueID: 1448145257
+    locked: 0
   - name: UI_ItemSlot
     uniqueID: 3367821075
     locked: 0

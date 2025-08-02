@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7427988158577050909}
   - component: {fileID: 8191135467018403137}
   - component: {fileID: 4755156296129688506}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 8894117609350515805}
   - component: {fileID: 5910350646291987797}
   - component: {fileID: 4312877503417899199}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Survivor UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}

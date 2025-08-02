@@ -47,11 +47,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _movement:
-    _acceleration: 32
+    _acceleration: 48
     _speed: 4
     _rigidbody: {fileID: 3134909947650842307}
   _moveAwayDistance: 2
-  _moveTowardDistance: 2.25
+  _moveTowardDistance: 2.5
   _smoothDistance: 1
   _growingSpeedOffset: 4
 --- !u!50 &3134909947650842307
