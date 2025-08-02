@@ -16,3 +16,4 @@ MonoBehaviour:
     _icon: {fileID: 2130535880278150251, guid: b002caccf378428498db4f07a28df13a, type: 3}
     _name: Bow
     _description: Shoot arrows at monsters
+    _weight: 0.7

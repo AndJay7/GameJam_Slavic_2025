@@ -16,3 +16,4 @@ MonoBehaviour:
     _icon: {fileID: 805579493, guid: b002caccf378428498db4f07a28df13a, type: 3}
     _name: Staff of Healing
     _description: Periodically heal hero
+    _weight: 0.5
