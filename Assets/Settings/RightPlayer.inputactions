@@ -1,5 +1,5 @@
 {
-    "name": "LeftPlayer",
+    "name": "RightPlayer",
     "maps": [
         {
             "name": "Main",
@@ -13,33 +13,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
-                },
-                {
-                    "name": "Select",
-                    "type": "Button",
-                    "id": "4c891519-028e-4483-8890-5672de32e862",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Add",
-                    "type": "Button",
-                    "id": "1f8b15c0-a9fd-4b74-9c64-b24ecc655eb2",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Clear",
-                    "type": "Button",
-                    "id": "3a856e1a-0426-4002-b98d-42bafd211185",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -207,39 +180,6 @@
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
-                },
-                {
-                    "name": "",
-                    "id": "81dd250e-3d6a-4e2a-946d-7e9ad283ccb1",
-                    "path": "<Gamepad>/buttonSouth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Select",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "f201edef-d75d-4844-ae19-6870bdee8891",
-                    "path": "<Gamepad>/buttonWest",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Add",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "4c23174c-a157-4c25-b936-2be8f5069e5e",
-                    "path": "<Gamepad>/buttonEast",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Clear",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 }
             ]
         }

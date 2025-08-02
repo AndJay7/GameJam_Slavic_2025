@@ -12,15 +12,26 @@ namespace Survivor
     {
         public static PlayerMovement Instance { get; private set; }
 
-
-
         public Vector2 Playerlocation;
+        private RightPlayer _inputActions;
+
 
         private void Awake()
         {
-
             Instance = this;
+        }
 
+        private void Start()
+        {
+            if(InputManager.Instance == null)
+            {
+                _inputActions = new RightPlayer();
+                _inputActions.Enable();
+            }
+            else
+            {
+                _inputActions = InputManager.Instance.RightPlayerActions;
+            }
         }
 
 
@@ -34,16 +45,7 @@ namespace Survivor
 
         private void FixedUpdate()
         {
-            var movementVector = Vector2.zero;
-
-            if (Keyboard.current.wKey.isPressed)
-                movementVector += Vector2.up;
-            if (Keyboard.current.sKey.isPressed)
-                movementVector -= Vector2.up;
-            if (Keyboard.current.dKey.isPressed)
-                movementVector += Vector2.right;
-            if (Keyboard.current.aKey.isPressed)
-                movementVector -= Vector2.right;
+            var movementVector = _inputActions.Main.Movement.ReadValue<Vector2>();
 
             if(movementVector.sqrMagnitude > 1f)
                 movementVector.Normalize();
