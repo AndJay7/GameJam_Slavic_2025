@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossSummonAttack : MonoBehaviour
+public class EnemySummonAttackInstance : MonoBehaviour
 {
     [SerializeField]
     private SpriteRenderer _spriteRenderer;
@@ -18,7 +18,15 @@ public class BossSummonAttack : MonoBehaviour
     {
         _frame += Time.fixedDeltaTime * _frameRate;
 
-        var sprite = _sprites[Mathf.FloorToInt(_frame) % _sprites.Length];
+        var spriteIndex = Mathf.FloorToInt(_frame);
+
+        if (spriteIndex >= _sprites.Length)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        
+        var sprite = _sprites[spriteIndex];
         
         _spriteRenderer.sprite = sprite;
     }
