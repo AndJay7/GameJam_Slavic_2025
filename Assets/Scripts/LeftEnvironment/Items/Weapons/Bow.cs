@@ -77,21 +77,46 @@ public class BowAbility : Ability
             //Debug.Log($"Closest hit at distance {shortestDistance} in direction {shortestDirection}");
 
             Quaternion rotation = Quaternion.FromToRotation(Vector2.right, shortestDirection);
-            if (repeats == 0)
+
+
+            int realrepeat = repeats;
+
+            foreach (Booster booster in _boosters)
             {
+
+                realrepeat = booster.GetModifiedSpawnCount(realrepeat);
+
+            }
+
+
+
+                if (realrepeat == 0)
+            {
+                float realsize = size;
+                float realdamage = damage;
+                
+
+                foreach (Booster booster in _boosters)
+                {
+                    realsize = booster.GetModifiedSize(realsize);
+                    realdamage = booster.GetModifiedStrength(realdamage);
+                    
+
+                }
+
                 GameObject instance = Object.Instantiate(attack, PlayerMovement.Instance.Playerlocation + new Vector2(0, 1), rotation);
 
-                instance.transform.localScale = new Vector3(size, size, 1);
+                instance.transform.localScale = new Vector3(realsize, realsize, 1);
 
                 Transform colliderTransform = instance.transform.Find("Collider");
                 DealDamage dealDamage = colliderTransform.GetComponent<DealDamage>();
-                dealDamage.damage = damage;
+                dealDamage.damage = realdamage;
 
             }
             else
             {
                 iter = 0;
-                int maxangle = repeats * 10;
+                int maxangle = realrepeat * 10;
 
 
 
@@ -104,17 +129,30 @@ public class BowAbility : Ability
 
 
 
-                while (iter <= repeats)
+                while (iter <= realrepeat)
                 {
                     Quaternion extrarotation = Quaternion.Euler(0f, 0f, extraangle);
 
+                    float realsize = size;
+                    float realdamage = damage;
+                    
+
+                    foreach (Booster booster in _boosters)
+                    {
+                        realsize = booster.GetModifiedSize(realsize);
+                        realdamage = booster.GetModifiedStrength(realdamage);
+                        
+
+                    }
+
+
                     GameObject instance = Object.Instantiate(attack, PlayerMovement.Instance.Playerlocation + new Vector2(0, 1), extrarotation);
 
-                    instance.transform.localScale = new Vector3(size, size, 1);
+                    instance.transform.localScale = new Vector3(realsize, realsize, 1);
 
                     Transform colliderTransform = instance.transform.Find("Collider");
                     DealDamage dealDamage = colliderTransform.GetComponent<DealDamage>();
-                    dealDamage.damage = damage;
+                    dealDamage.damage = realdamage;
                     extraangle += maxangle / (repeats);
 
                     iter++;
@@ -129,9 +167,13 @@ public class BowAbility : Ability
 
 
 
+            float realcooldown = cooldown;
+            foreach (Booster booster in _boosters)
+            {
+                realcooldown = booster.GetModifiedSpawnRate(realcooldown);
+            }
 
-
-            await UniTask.Delay((int)(cooldown * 1000));
+            await UniTask.Delay((int)(realcooldown * 1000));
         }
 
 

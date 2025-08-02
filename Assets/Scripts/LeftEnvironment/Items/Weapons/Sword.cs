@@ -49,12 +49,24 @@ public class SwordAbility : Ability
     }
     private async UniTaskVoid StartLoop()
     {
-        Debug.Log("BowAbility activated!");
+        //Debug.Log("BowAbility activated!");
+
+
+
 
         while (isActive)
         {
+            int realrepeat = repeats;
+
+            foreach (Booster booster in _boosters)
+            {
+                realrepeat = booster.GetModifiedSpawnCount(realrepeat);
+
+            }
+
+
             int iteration = 0;
-            while (iteration <= repeats)
+            while (iteration <= realrepeat)
             {
 
                 if (PlayerMovement.Instance.LatestMovementDirection.x > 0)
@@ -77,28 +89,43 @@ public class SwordAbility : Ability
                     }
                 }
 
+                float realsize = size;
+                float realdamage = damage;
+                
+
+                foreach(Booster booster in _boosters)
+                {
+                    realsize = booster.GetModifiedSize(realsize);
+                    realdamage = booster.GetModifiedStrength(realdamage);
+                    
+
+                }
+
 
                 GameObject instance = Object.Instantiate(attack, PlayerMovement.Instance.Playerlocation + new Vector2(correcteddir * 2 + iteration * 2 * correcteddir, 1), Quaternion.identity);
 
-                instance.transform.localScale = new Vector3(size, size, 1);
+                instance.transform.localScale = new Vector3(realsize, realsize, 1);
 
                 Transform colliderTransform = instance.transform.Find("Collider");
                 DealDamage dealDamage = colliderTransform.GetComponent<DealDamage>();
-                dealDamage.damage = damage;
+                dealDamage.damage = realdamage;
 
 
                 rememberdir = correcteddir;
 
                 iteration++;
-                if (repeats > 0)
+                if (realrepeat > 0)
                 {
                     await UniTask.Delay(100);
                 }
             }
 
-
-
-            await UniTask.Delay((int)(cooldown * 1000));
+            float realcooldown = cooldown;
+            foreach (Booster booster in _boosters)
+            {
+                realcooldown = booster.GetModifiedSpawnRate(realcooldown);
+            }
+                await UniTask.Delay((int)(realcooldown * 1000));
         }
 
 

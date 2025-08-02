@@ -12,7 +12,7 @@ public class Booster : Item
     [SerializeField]
     private FloatModifier _spawnRateModifier = new FloatModifier();
     [SerializeField]
-    private FloatModifier _spawnCountModifier = new FloatModifier();
+    private IntModifier _spawnCountModifier = new IntModifier();
     [SerializeField]
     private FloatModifier _strengthModifier = new FloatModifier();
     [SerializeField]
@@ -21,7 +21,7 @@ public class Booster : Item
     private FloatModifier _durationModifier = new FloatModifier();
 
     public float GetModifiedSpawnRate(float value) => _spawnRateModifier.Evaluate(value);
-    public float GetModifiedSpawnCount(float value) => _spawnCountModifier.Evaluate(value);
+    public int GetModifiedSpawnCount(int value) => _spawnCountModifier.Evaluate(value);
     public float GetModifiedStrength(float value) => _strengthModifier.Evaluate(value);
     public float GetModifiedSize(float value) => _sizeModifier.Evaluate(value);
     public float GetModifiedDuration(float value) => _durationModifier.Evaluate(value);
