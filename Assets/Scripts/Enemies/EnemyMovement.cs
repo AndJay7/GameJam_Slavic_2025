@@ -63,6 +63,11 @@ namespace Survivor
                 if(fractionspeed != 1f)
                 {
                     fractionspeed = 1f;
+                    SpriteRenderer sr = GetComponentInChildren<SpriteRenderer>();
+                    if (sr != null)
+                    {
+                        sr.color = new Color(1f, 1f, 1f); 
+                    }
                 }
 
             }
@@ -79,6 +84,11 @@ namespace Survivor
 
             countdown = duration;
 
+            SpriteRenderer sr = GetComponentInChildren<SpriteRenderer>();
+            if (sr != null)
+            {
+                sr.color = new Color(0.7f, 0.7f, 1f);
+            }
 
         }
 
