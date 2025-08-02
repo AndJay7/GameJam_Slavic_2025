@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _text: {fileID: 2777117647112418208}
-  _countdownMinutes: 0.1
+  _countdownMinutes: 3
   _bossPrefab: {fileID: 2030618001054647370, guid: 47c3b3ab32f274b4599066046c0d8a1f, type: 3}
 --- !u!114 &2777117647112418208
 MonoBehaviour:
