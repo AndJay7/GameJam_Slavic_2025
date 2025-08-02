@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2320465373196606711}
   - component: {fileID: 8321872488990978918}
   - component: {fileID: 4286535545118079778}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 4232523044208223743}
   - component: {fileID: 7915792992902121688}
   - component: {fileID: 5484994084341438766}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sword_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -203,7 +203,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1884103179832423064}
-  m_Layer: 0
+  - component: {fileID: 8764310543009864127}
+  m_Layer: 7
   m_Name: SwordSlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,3 +227,15 @@ Transform:
   - {fileID: 4232523044208223743}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8764310543009864127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8560452317840366388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3874eee76d346e43ba0f48eebd06f80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
