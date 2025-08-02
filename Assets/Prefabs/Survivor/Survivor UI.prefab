@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5770026874088362296}
   - component: {fileID: 3423723647930557785}
   - component: {fileID: 7989056673125990149}
+  - component: {fileID: 2938751034212333115}
   m_Layer: 7
   m_Name: BossHealthBarBg
   m_TagString: Untagged
@@ -76,6 +77,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 0.21666667
+--- !u!114 &2938751034212333115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2661267097347677126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6b63a0a482022d4a99753aabfd974ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bar: {fileID: 6980793243600699958}
 --- !u!1 &6307087490390149795
 GameObject:
   m_ObjectHideFlags: 0
