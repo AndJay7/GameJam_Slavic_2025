@@ -31,9 +31,12 @@ public class EnemyHealth : MonoBehaviour, IHealth
     {
         starthealth -= damage;
 
-
+        if (popup != null) 
+        { 
         GameObject obj = (GameObject)Instantiate(popup, transform.position, transform.rotation);
         obj.GetComponent<DamagePopup>().Number(damage);
+        }
+        
 
 
 

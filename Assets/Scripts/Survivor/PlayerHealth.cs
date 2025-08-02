@@ -58,4 +58,24 @@ public class PlayerHealth : MonoBehaviour
         health += addHealth;
         health = Mathf.Clamp(health, 0, maxHealth);
     }
+    void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "enemy")
+        {
+            if (collision.gameObject.TryGetComponent(out IHealth something))
+            {
+                multiplier += something.DealDamage();
+
+            }
+
+
+
+        }
+
+
+
+    }
+
+
+
 }

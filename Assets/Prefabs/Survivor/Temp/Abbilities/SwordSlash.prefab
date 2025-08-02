@@ -82,9 +82,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b3fb4b0308971e42b9f81124ec0a6b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 50
+  damage: 30
   continous: 0
+  startskip: 2
   skip: 2
+  iscapped: 0
+  cap: 5
 --- !u!1 &8560452317840366388
 GameObject:
   m_ObjectHideFlags: 0

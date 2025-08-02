@@ -17,3 +17,9 @@ MonoBehaviour:
     _name: Bow
     _description: Shoot arrows at monsters
     _weight: 0.7
+    _ability:
+      attack: {fileID: 5344798261418750901, guid: 5359124ea0ee92344b6c3da069bad735, type: 3}
+      cooldown: 2
+      damage: 50
+      size: 1
+      repeats: 0
