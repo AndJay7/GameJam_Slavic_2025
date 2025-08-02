@@ -141,6 +141,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7857697444054035673}
   - component: {fileID: 5134281075740729662}
+  - component: {fileID: 5926813020415658568}
   m_Layer: 7
   m_Name: Graphic
   m_TagString: Untagged
@@ -206,7 +207,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 6402978207049665549, guid: efaf70ed546f0224fbb30b6358c31776, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -217,3 +218,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5926813020415658568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8117702710614671103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2601185751fd209468f65443a876706d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _angle: 3
+  _offset: 0.2
+  _speed: 4
+  _roughness: 30000
+  _roughnessMin: 30000
+  _flippable: 1
+  _flipCooldown: 0.0625
+  _rigidbody: {fileID: 9148417472917476283}
