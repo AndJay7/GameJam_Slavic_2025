@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Survivor;
 using Cysharp.Threading.Tasks;
-
-
+using System.Threading;
 
 [System.Serializable]
 public class Bow : Weapon<BowAbility>
@@ -28,8 +27,6 @@ public class BowAbility : Ability
 
     private int layerMask = 1 << 8;
 
-    private bool isActive = false;
-
     private Quaternion extrarotation;
 
     private int iter;
@@ -45,28 +42,25 @@ public class BowAbility : Ability
         return ability;
     }
 
+    private CancellationTokenSource tokenSource;
+
     public override void Activate()
     {
-        //throw new System.NotImplementedException();
-        //Debug.Log("A");
-        //Debug.Log(attack);
-        //Instantiate(attack);
-
-        isActive = true;
-        StartLoop().Forget();
+        tokenSource?.Cancel();
+        tokenSource = new CancellationTokenSource();
+        StartLoop(tokenSource.Token).Forget();
 
     }
 
     public override void Stop()
     {
-        //throw new System.NotImplementedException();
-        isActive = false;
+        tokenSource?.Cancel();
     }
-    private async UniTaskVoid StartLoop()
+    private async UniTaskVoid StartLoop(CancellationToken cancellationToken)
     {
 
 
-        while (isActive)
+        while (!cancellationToken.IsCancellationRequested)
         {
             float shortestDistance = Mathf.Infinity;
             Vector2 shortestDirection = Vector2.zero;
@@ -167,7 +161,7 @@ public class BowAbility : Ability
                     Transform colliderTransform = instance.transform.Find("Collider");
                     DealDamage dealDamage = colliderTransform.GetComponent<DealDamage>();
                     dealDamage.damage = realdamage;
-                    extraangle += maxangle / (repeats);
+                    extraangle += (float)maxangle / (realrepeat);
 
                     iter++;
 
@@ -187,7 +181,7 @@ public class BowAbility : Ability
                 realcooldown = booster.GetModifiedSpawnRate(realcooldown);
             }
 
-            await UniTask.Delay((int)(realcooldown * 1000));
+            await UniTask.Delay((int)(realcooldown * 1000),cancellationToken: cancellationToken);
         }
 
 

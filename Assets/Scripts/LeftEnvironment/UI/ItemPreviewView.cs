@@ -24,7 +24,23 @@ public class ItemPreviewView : MonoBehaviour
         if(slot.item != null)
         {
             var text = $"Name: {slot.item.Name}\n";
-            text += $"Description: {slot.item.Description}";
+            text += $"Description: {slot.item.Description}\n";
+
+            var additionalDesc = string.Empty;
+            var neighbours = GameManager.Instance.Equipment.GetNeighbourIndexes(obj);
+            foreach (var n in neighbours)
+            {
+                var neighbourSlot = GameManager.Instance.Equipment.GetSlot(n);
+                if (neighbourSlot.item is Weapon weapon)
+                    additionalDesc += $"-{weapon.Name}\n";
+            }
+
+            if (!string.IsNullOrEmpty(additionalDesc))
+            {
+                text += $"Boosted weapons: \n";
+                text += additionalDesc;
+            }
+
             description = text;
         }
         _description.text = description;

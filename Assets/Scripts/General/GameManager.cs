@@ -39,8 +39,8 @@ public class GameManager : Singleton<GameManager>
 
     private void ItemSwapStart(Vector2Int startIndex, Vector2Int endIndex)
     {
-        ItemRemove(startIndex,false);
-        ItemRemove(endIndex, false);
+        ItemRemove(startIndex,true);
+        ItemRemove(endIndex, true);
     }
 
     private void ItemSwapEnd(Vector2Int startIndex, Vector2Int endIndex)

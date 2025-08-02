@@ -42,6 +42,7 @@ public class StaffHealAbility : Ability
 
     public override void Activate()
     {
+        tokenSource?.Cancel();
         tokenSource = new CancellationTokenSource();
         constraint = new ConstraintSource();
         constraint.sourceTransform = PlayerMovement.Instance.transform;
@@ -61,7 +62,9 @@ public class StaffHealAbility : Ability
                 cooldown = booster.GetModifiedSpawnRate(cooldown);
             }
 
-            await UniTask.WaitForSeconds(cooldown);
+            await UniTask.WaitForSeconds(cooldown,cancellationToken:cancellation);
+            if (cancellation.IsCancellationRequested)
+                break;
 
             foreach (var booster in _boosters)
             {
@@ -76,6 +79,6 @@ public class StaffHealAbility : Ability
 
     public override void Stop()
     {
-        tokenSource.Cancel();
+        tokenSource?.Cancel();
     }
 }

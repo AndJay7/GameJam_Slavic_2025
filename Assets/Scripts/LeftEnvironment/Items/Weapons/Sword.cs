@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Survivor;
 using Cysharp.Threading.Tasks;
-
-
+using System.Threading;
 
 [System.Serializable]
 public class Sword : Weapon<SwordAbility>
@@ -44,42 +43,32 @@ public class SwordAbility : Ability
 
     private int correcteddir;
 
-    private bool isActive = false;
-
     private int right = 1;
+
+    private CancellationTokenSource tokenSource;
 
     public override void Activate()
     {
-        //throw new System.NotImplementedException();
-        //Debug.Log("A");
-        //Debug.Log(attack);
-        //Instantiate(attack);
-
-        isActive = true;
-        StartLoop().Forget();
-
+        tokenSource?.Cancel();
+        tokenSource = new CancellationTokenSource();
+        StartLoop(tokenSource.Token).Forget();
     }
 
     public override void Stop()
     {
-        //throw new System.NotImplementedException();
-        isActive = false;
+        tokenSource?.Cancel();
     }
-    private async UniTaskVoid StartLoop()
+    private async UniTaskVoid StartLoop(CancellationToken cancellationToken)
     {
         //Debug.Log("BowAbility activated!");
 
-
-
-
-        while (isActive)
+        while (!cancellationToken.IsCancellationRequested)
         {
             int realrepeat = repeats;
 
             foreach (Booster booster in _boosters)
             {
                 realrepeat = booster.GetModifiedSpawnCount(realrepeat);
-
             }
 
 
@@ -144,7 +133,7 @@ public class SwordAbility : Ability
                 iteration++;
                 if (realrepeat > 0)
                 {
-                    await UniTask.Delay(100);
+                    await UniTask.Delay(100,cancellationToken: cancellationToken);
                 }
             }
 
@@ -153,7 +142,7 @@ public class SwordAbility : Ability
             {
                 realcooldown = booster.GetModifiedSpawnRate(realcooldown);
             }
-                await UniTask.Delay((int)(realcooldown * 1000));
+                await UniTask.Delay((int)(realcooldown * 1000), cancellationToken: cancellationToken);
         }
 
 

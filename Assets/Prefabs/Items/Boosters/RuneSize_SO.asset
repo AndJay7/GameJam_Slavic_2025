@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RuneSize_SO
   m_EditorClassIdentifier: 
   _item:
-    _icon: {fileID: -1513709173, guid: b002caccf378428498db4f07a28df13a, type: 3}
+    _icon: {fileID: -149479704, guid: b002caccf378428498db4f07a28df13a, type: 3}
     _name: Rune of Size
     _description: Size of near weapon is doubled
     _weight: 1
@@ -28,7 +28,7 @@ MonoBehaviour:
       _value: 2
     _sizeModifier:
       _operatorIndex: 2
-      _value: 2
+      _value: 1.3
     _durationModifier:
       _operatorIndex: -1
       _value: 2

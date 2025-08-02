@@ -23,65 +23,53 @@ public class StaffIceAbility : Ability
 {
     [SerializeField]
     private PositionConstraint _effectPrefab;
-
-    private CancellationTokenSource tokenSource;
-    private ConstraintSource constraint;
-
-
-
-
-
-
-
-    //<<<<<<< Updated upstream
-    public override Ability Clone()
-    {
-        throw new System.NotImplementedException();
-    }
-//=======
     [SerializeField] GameObject attack;
     [SerializeField] float cooldown = 2f;
-    
     [SerializeField] float size = 1f;
     [SerializeField] int repeats = 0;
+    [SerializeField] float duration = 5f;
+
+    private ConstraintSource constraint;
+
+    public override Ability Clone()
+    {
+        var ability = new StaffIceAbility();
+        ability._effectPrefab = _effectPrefab;
+        ability.attack = attack;
+        ability.cooldown = cooldown;
+        ability.size = size;
+        ability.repeats = repeats;
+        ability.duration = duration;
+        return ability;
+    }
 
     private int rememberdir;
 
     private int correcteddir;
 
-    private bool isActive = false;
-
-    [SerializeField] float duration = 5f;
-//>>>>>>> Stashed changes
+    private CancellationTokenSource tokenSource;
 
     public override void Activate()
     {
+        tokenSource?.Cancel();
+        tokenSource = new CancellationTokenSource();
 
-        
         constraint = new ConstraintSource();
         constraint.sourceTransform = PlayerMovement.Instance.transform;
         constraint.weight = 1;
 
-
-
-        isActive = true;
-        StartLoop().Forget();
+        StartLoop(tokenSource.Token).Forget();
 
     }
 
     public override void Stop()
     {
-
-        isActive = false;
+        tokenSource?.Cancel();
     }
-    private async UniTaskVoid StartLoop()
+
+    private async UniTaskVoid StartLoop(CancellationToken cancellationToken)
     {
-
-
-
-
-
-        while (isActive)
+        while (!cancellationToken.IsCancellationRequested)
         {
             int realrepeat = repeats;
 
@@ -144,7 +132,7 @@ public class StaffIceAbility : Ability
             {
                 realcooldown = booster.GetModifiedSpawnRate(realcooldown);
             }
-            await UniTask.Delay((int)(realcooldown * 1000));
+            await UniTask.Delay((int)(realcooldown * 1000),cancellationToken:cancellationToken);
         }
 
 

@@ -13,9 +13,8 @@ GameObject:
   - component: {fileID: 9148417472917476283}
   - component: {fileID: 386845067839074979}
   - component: {fileID: 1808569858501784727}
-  - component: {fileID: 1772223010020869052}
   m_Layer: 8
-  m_Name: Shooter
+  m_Name: Slime
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,10 +50,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _movement:
     _acceleration: 200
-    _speed: 2
+    _speed: 5
     _rigidbody: {fileID: 9148417472917476283}
-  _scaleWithDistance: 1
-  _scaleWithDistanceOffset: -5
+  _scaleWithDistance: 0
+  _scaleWithDistanceOffset: 0
 --- !u!50 &9148417472917476283
 Rigidbody2D:
   serializedVersion: 4
@@ -67,7 +66,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1000
+  m_Mass: 200
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -136,20 +135,6 @@ MonoBehaviour:
   pickup: {fileID: 7450918006906196047, guid: aa4aebac82f43064d868e241f33a5368, type: 3}
   _invincible: 0
   _boss: 0
---- !u!114 &1772223010020869052
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2134876327840926819}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 951646e18df6bc746b7405b19560655e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firerate: 6
-  projectile: {fileID: 4330000478184520475, guid: 93210cf5b1496d3498e5a6639a5e39d2, type: 3}
 --- !u!1 &8117702710614671103
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,8 +211,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 6402978207049665549, guid: efaf70ed546f0224fbb30b6358c31776, type: 3}
-  m_Color: {r: 0, g: 0.031702522, b: 0.8792453, a: 1}
+  m_Sprite: {fileID: 21300000, guid: d35b3f360c166ad4aacacc578e01b0e4, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -249,9 +234,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2601185751fd209468f65443a876706d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _angle: 3
-  _offset: 0.2
-  _speed: 4
+  _angle: 0
+  _offset: 0.5
+  _speed: 1
   _roughness: 30000
   _roughnessMin: 30000
   _flippable: 1

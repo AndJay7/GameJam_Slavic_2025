@@ -17,6 +17,8 @@ namespace Survivor
         [SerializeField] GameObject Enemy1;
         [SerializeField] GameObject Enemy2;
         [SerializeField] GameObject Enemy3;
+        [SerializeField] GameObject Enemy4;
+
 
 
         // Start is called before the first frame update
