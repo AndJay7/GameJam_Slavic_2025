@@ -322,9 +322,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57386f6fcbc4a634cb5d27fff91a08cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 200
-  health: 200
-  multiplier: 5
   _healthBar: {fileID: 775719364864466504}
 --- !u!114 &5679628443365805981
 MonoBehaviour:
@@ -338,6 +335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dbfb170f4be46e44a6fe5b6cfd75b72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _health: {fileID: 5442280393785027054}
   Playerlocation: {x: 0, y: 0}
   _movement:
     _acceleration: 288

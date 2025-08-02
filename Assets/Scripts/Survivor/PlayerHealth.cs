@@ -4,22 +4,34 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public float maxHealth = 200f;
-    public float health = 200f;
-    public float multiplier = 5f;
-    
+    private float maxHealth = 200f;
+    private float health;
+    private float multiplier = 0;
+
+    private float visibleHealth;
+    private float healthChangeVel;
     [SerializeField]
     private Transform _healthBar;
 
-    void FixedUpdate()
+    private void Awake()
     {
-        health -= Time.fixedDeltaTime * multiplier;
-        multiplier = 0f;
+        health = visibleHealth = maxHealth;
+    }
+
+    private void Update()
+    {
+        visibleHealth = Mathf.SmoothDamp(visibleHealth, health, ref healthChangeVel, 0.1f);
 
         if (_healthBar != null)
         {
-            _healthBar.localScale = new Vector3(Mathf.Max(0f, health / maxHealth), 1f, 1f);
+            _healthBar.localScale = new Vector3(Mathf.Max(0f, visibleHealth / maxHealth), 1f, 1f);
         }
+    }
+
+    void FixedUpdate()
+    {
+        AddHealth(-Time.fixedDeltaTime * multiplier);
+        multiplier = 0f;
     }
 
     void OnCollisionStay2D(Collision2D collision)
@@ -31,20 +43,19 @@ public class PlayerHealth : MonoBehaviour
                 multiplier += something.DealDamage();
 
             }
-
-
-
         }
-
-
-
     }
-    void OnCollisionEnter2D(Collision2D collision) 
-    
+
+    void OnCollisionEnter2D(Collision2D collision)     
     { 
 
       if (collision.gameObject.tag == "projectile")
-      health -= 20;
-       
+            AddHealth(-20); 
+    }
+
+    public void AddHealth(float addHealth)
+    {
+        health += addHealth;
+        health = Mathf.Clamp(health, 0, maxHealth);
     }
 }

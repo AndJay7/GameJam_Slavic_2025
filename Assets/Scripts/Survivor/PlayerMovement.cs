@@ -10,7 +10,11 @@ namespace Survivor
 {
     public class PlayerMovement : MonoBehaviour
     {
+        [SerializeField]
+        private PlayerHealth _health = null;
+
         public static PlayerMovement Instance { get; private set; }
+        public PlayerHealth Health => _health;
 
         public Vector2 Playerlocation;
         private RightPlayer _inputActions;

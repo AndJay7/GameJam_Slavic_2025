@@ -8,6 +8,10 @@ public class GameManager : Singleton<GameManager>
 {
     [SerializeField]
     private ItemDatabaseSO _itemsDatabase;
+    [SerializeField]
+    private List<ItemSO> _startEquipment;
+    [SerializeField]
+    private List<ItemSO> _startQueue;
 
     public ItemDatabaseSO ItemDatabase => _itemsDatabase;
     public ItemsQueue ItemsQueue { get; } = new ItemsQueue();
@@ -23,7 +27,14 @@ public class GameManager : Singleton<GameManager>
 
     private void Start()
     {
-        Equipment.AddItem(ItemDatabase.GetItems()[0]);
+        foreach (var itemSO in _startQueue)
+            ItemsQueue.Enqueue(itemSO.Item);
+
+        foreach (var itemSO in _startEquipment)
+        {
+            Equipment.AddItem(itemSO.Item);
+            Equipment.SetFocusItem(new Vector2Int(1, 0));
+        }
     }
 
     private void ItemSwapStart(Vector2Int startIndex, Vector2Int endIndex)
