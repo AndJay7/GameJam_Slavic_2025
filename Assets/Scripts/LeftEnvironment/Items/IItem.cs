@@ -11,8 +11,11 @@ public abstract class Item
     private string _name;
     [SerializeField, Multiline]
     private string _description;
+    [SerializeField]
+    private float _weight;
 
     public Sprite Icon => _icon;
     public string Name => _name;
     public string Description => _description;
+    public float Weight => _weight;
 }
