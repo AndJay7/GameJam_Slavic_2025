@@ -678,10 +678,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7427988158577050909, guid: 567923829add2104a926484c3ce7f6b5, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -43.33496
-      objectReference: {fileID: 0}
     - target: {fileID: 8263040991239959348, guid: 567923829add2104a926484c3ce7f6b5, type: 3}
       propertyPath: m_Name
       value: Survivor UI
