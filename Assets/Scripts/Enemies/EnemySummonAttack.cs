@@ -15,6 +15,8 @@ public class EnemySummonAttack : MonoBehaviour
     }
     
     [SerializeField]
+    private float2 _initalCooldown;
+    [SerializeField]
     private float2 _cooldown;
     [SerializeField]
     private int2 _attackCount;
@@ -30,6 +32,11 @@ public class EnemySummonAttack : MonoBehaviour
     private float _actionTime;
     private ActionType _actionType;
     private int _attacksLeft;
+
+    private void Start()
+    {
+        _actionTime = Time.time + Random.Range(_initalCooldown.x, _initalCooldown.y);
+    }
 
     private void FixedUpdate()
     {

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyHealth : MonoBehaviour, IHealth
 {
@@ -57,9 +58,14 @@ public class EnemyHealth : MonoBehaviour, IHealth
         
         starthealth -= damage;
 
+        if (starthealth <= 0 && _boss)
+        {
+            SceneManager.LoadScene("WinScreen");
+        }
+        
         if (popup != null) 
         { 
-        GameObject obj = (GameObject)Instantiate(popup, transform.position, transform.rotation);
+         GameObject obj = (GameObject)Instantiate(popup, transform.position, transform.rotation);
         obj.GetComponent<DamagePopup>().Number(damage);
         }
         
