@@ -84,16 +84,16 @@ namespace Survivor
         {
             var center = new int2(Mathf.RoundToInt(transform.position.x / _gridSize), Mathf.RoundToInt(transform.position.y / _gridSize));
 
-            TryPlaceTile(center, center - new int2(1, 1));
+            TryPlaceTile(center, new int2(1, 1));
             
             for (int r = 1; r <= _generateRadius; r++)
             {
                 for (int c = -r; c < r; c++)
                 {
-                    TryPlaceTile(center + new int2(-r, c), center);
-                    TryPlaceTile(center + new int2(c, r), center);
-                    TryPlaceTile(center + new int2(r, -c), center);
-                    TryPlaceTile(center + new int2(-c, -r), center);
+                    TryPlaceTile(center + new int2(-r, c), new int2(-1, 1));
+                    TryPlaceTile(center + new int2(c, r), new int2(1, 1));
+                    TryPlaceTile(center + new int2(r, -c), new int2(1, -1));
+                    TryPlaceTile(center + new int2(-c, -r), new int2(-1, -1));
                 }
             }
 
@@ -131,7 +131,7 @@ namespace Survivor
             }
         }
 
-        private void TryPlaceTile(int2 position, int2 center)
+        private void TryPlaceTile(int2 position, int2 expandSign)
         {
             if (_tileMap.ContainsKey(position))
                 return;
@@ -149,8 +149,6 @@ namespace Survivor
                 }
             }
 
-            var expandSign = Sign(position - center);
-
             var pickTileWeight = Random.Range(0f, pickBiome.TilesTotalWeight);
             var pickTileIndex = 0;
             var pickTile = pickBiome.Tiles[pickTileIndex];
@@ -164,6 +162,7 @@ namespace Survivor
                 {
                     pickTileIndex = i;
                     pickTile = pickBiome.Tiles[i];
+                    break;
                 }
             }
 

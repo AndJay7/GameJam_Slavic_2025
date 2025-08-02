@@ -11,9 +11,6 @@ GameObject:
   - component: {fileID: 4698534635657626880}
   - component: {fileID: 6851554876681173425}
   - component: {fileID: 1305521948478616589}
-  - component: {fileID: 4336630288972905401}
-  - component: {fileID: 3012473971813548351}
-  - component: {fileID: 7720409553839107103}
   m_Layer: 0
   m_Name: Ts1_Swamp_1
   m_TagString: Untagged
@@ -103,80 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _size:
-    x: 1
-    y: 1
-  _weight: 1
-  _flippable: 1
---- !u!114 &4336630288972905401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4540315258386194086}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 188a4e2e4be051047be08d5aabd250b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _useChance: 0
-  _chance: 0
-  _spawnArea:
-    x: 1.7
-    y: 1.7
-  _spawnCount:
-    x: 0
-    y: 6
-  _flippable: 1
-  _props:
-  - {fileID: 4540315258386194086, guid: 1788cd42f7cee8443af87804731279f3, type: 3}
-  - {fileID: 4540315258386194086, guid: 9989a30b7a0792548b81c6c7aff33c35, type: 3}
-  - {fileID: 4540315258386194086, guid: 942332566497ca343a8cad203d82c9fa, type: 3}
---- !u!114 &3012473971813548351
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4540315258386194086}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 188a4e2e4be051047be08d5aabd250b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _useChance: 0
-  _chance: 0
-  _spawnArea:
-    x: 2
+    x: 3
     y: 2
-  _spawnCount:
-    x: 2
-    y: 7
+  _weight: 0.02
   _flippable: 1
-  _props:
-  - {fileID: 4540315258386194086, guid: 09e4eb06ba158204dbcdb2d5fdaac72a, type: 3}
-  - {fileID: 4540315258386194086, guid: 67e22ae17263743438d38dfc89d18005, type: 3}
-  - {fileID: 4540315258386194086, guid: bcac2d342b02986418cb29e7a72a1674, type: 3}
---- !u!114 &7720409553839107103
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4540315258386194086}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 188a4e2e4be051047be08d5aabd250b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _useChance: 1
-  _chance: 0.06
-  _spawnArea:
-    x: 0.5
-    y: 0.5
-  _spawnCount:
-    x: 1
-    y: 1
-  _flippable: 1
-  _props:
-  - {fileID: 4540315258386194086, guid: d9790a5f58c60cd40ba0ffc6db26e804, type: 3}

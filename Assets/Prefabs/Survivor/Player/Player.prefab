@@ -48,8 +48,16 @@ MonoBehaviour:
   _deleteRadius: 32
   _deleteIterations: 64
   _gridSize: 2
-  _tiles:
-  - {fileID: 1305521948478616589, guid: d25823ab568df354787b1b59f793f2c3, type: 3}
+  _biomes:
+  - _noise: {fileID: 11400000, guid: 36de32fda825ed04fa03d0fa0609b985, type: 2}
+    _noiseRemap: {x: 0, y: 1}
+    _tiles:
+    - {fileID: 1305521948478616589, guid: d25823ab568df354787b1b59f793f2c3, type: 3}
+    - {fileID: 1305521948478616589, guid: a333e0abadc26664ea387ed02ed09acd, type: 3}
+  - _noise: {fileID: 11400000, guid: 4ba0090283d747a439bcd583886f1d22, type: 2}
+    _noiseRemap: {x: -2, y: 5}
+    _tiles:
+    - {fileID: 1305521948478616589, guid: 642e658139713934daaa18c49ec1e5b6, type: 3}
 --- !u!1 &1744933930545133234
 GameObject:
   m_ObjectHideFlags: 0
@@ -119,7 +127,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -236,9 +244,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dbfb170f4be46e44a6fe5b6cfd75b72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Playerlocation: {x: 0, y: 0}
   _movement:
-    _acceleration: 32
-    _speed: 3
+    _acceleration: 288
+    _speed: 15
     _rigidbody: {fileID: 5996355916806543169}
 --- !u!50 &5996355916806543169
 Rigidbody2D:
@@ -263,7 +272,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
@@ -313,6 +322,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4181768269505341942}
   - component: {fileID: 6175562661681501834}
+  - component: {fileID: 2973325943462681082}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -389,3 +399,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2973325943462681082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6141090378977182741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2601185751fd209468f65443a876706d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _angle: 5
+  _offset: 0.05
+  _speed: 10
+  _roughness: 16777216
+  _roughnessMin: 16777216
+  _rigidbody: {fileID: 5996355916806543169}
