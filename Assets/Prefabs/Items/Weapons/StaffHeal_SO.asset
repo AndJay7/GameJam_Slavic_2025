@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: StaffHeal_SO
   m_EditorClassIdentifier: 
   _item:
-    _icon: {fileID: 0}
-    _name: Staff  of Healing
+    _icon: {fileID: 805579493, guid: b002caccf378428498db4f07a28df13a, type: 3}
+    _name: Staff of Healing
     _description: Periodically heal hero

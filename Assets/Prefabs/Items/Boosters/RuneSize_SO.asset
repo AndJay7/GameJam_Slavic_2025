@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c7097f02214ace4386ec78c29d08964, type: 3}
+  m_Name: RuneSize_SO
+  m_EditorClassIdentifier: 
+  _item:
+    _icon: {fileID: -1513709173, guid: b002caccf378428498db4f07a28df13a, type: 3}
+    _name: Rune of Size
+    _description: Size of near weapon is doubled
+    _spawnRateModifier:
+      _operatorIndex: -1
+      _value: 0
+    _spawnCountModifier:
+      _operatorIndex: -1
+      _value: 0
+    _strengthModifier:
+      _operatorIndex: -1
+      _value: 2
+    _sizeModifier:
+      _operatorIndex: 2
+      _value: 2
+    _durationModifier:
+      _operatorIndex: -1
+      _value: 2

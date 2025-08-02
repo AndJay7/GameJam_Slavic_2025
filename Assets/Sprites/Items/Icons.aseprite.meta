@@ -121,9 +121,9 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: sword
+  - name: RuneTime
     originalName: 
-    pivot: {x: 0.53333336, y: 0.53333336}
+    pivot: {x: 0.4666667, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -131,8 +131,8 @@ ScriptedImporter:
       x: 4
       y: 4
       width: 15
-      height: 15
-    spriteID: ed004971019e12a4c98fb48988523dc3
+      height: 16
+    spriteID: 8e98ef6e71bc8524c959e8da0eb1cc9c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -141,60 +141,23 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: RuneIce
-    originalName: 
-    pivot: {x: 0.53846157, y: 0.5}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 27
-      width: 13
-      height: 16
-    spriteID: b20436bd3fe979f48a7f2255093d0ab7
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 27}
   spriteSheetImportData: []
   asepriteLayers:
-  - layerIndex: 0
-    guid: -44376519
-    name: sword
+  - layerIndex: 6
+    guid: -1345616705
+    name: RuneTime
     layerFlags: 3
     layerType: 0
     blendMode: 0
     cells:
-    - name: sword
-      frameIndex: 0
-      cellRect:
-        x: 0
-        y: 0
-        width: 15
-        height: 15
-      spriteId: ed004971019e12a4c98fb48988523dc3
-    linkedCells: []
-    parentIndex: -1
-  - layerIndex: 1
-    guid: -60117274
-    name: RuneIce
-    layerFlags: 3
-    layerType: 0
-    blendMode: 0
-    cells:
-    - name: RuneIce
+    - name: RuneTime
       frameIndex: 0
       cellRect:
         x: 1
         y: 0
-        width: 13
+        width: 15
         height: 16
-      spriteId: b20436bd3fe979f48a7f2255093d0ab7
+      spriteId: 8e98ef6e71bc8524c959e8da0eb1cc9c
     linkedCells: []
     parentIndex: -1
   platformSettings:

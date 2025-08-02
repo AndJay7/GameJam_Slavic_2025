@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Bow_SO
   m_EditorClassIdentifier: 
   _item:
-    _icon: {fileID: 0}
+    _icon: {fileID: 2130535880278150251, guid: b002caccf378428498db4f07a28df13a, type: 3}
     _name: Bow
     _description: Shoot arrows at monsters
