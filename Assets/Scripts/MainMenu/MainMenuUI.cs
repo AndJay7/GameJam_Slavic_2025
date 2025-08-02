@@ -56,6 +56,6 @@ public class MainMenuUI : MonoBehaviour
             await UniTask.WaitForSeconds(1);
         }
         gameObject.SetActive(false);
-        SceneManager.LoadScene(_gameSceneName, LoadSceneMode.Additive);
+        SceneManager.LoadScene(_gameSceneName, LoadSceneMode.Single);
     }
 }
