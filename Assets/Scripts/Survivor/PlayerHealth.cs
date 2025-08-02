@@ -47,4 +47,24 @@ public class PlayerHealth : MonoBehaviour
       health -= 20;
        
     }
+    void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "enemy")
+        {
+            if (collision.gameObject.TryGetComponent(out IHealth something))
+            {
+                multiplier += something.DealDamage();
+
+            }
+
+
+
+        }
+
+
+
+    }
+
+
+
 }
