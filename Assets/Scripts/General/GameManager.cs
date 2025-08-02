@@ -18,7 +18,12 @@ public class GameManager : Singleton<GameManager>
         base.Awake();
         Equipment.OnItemAdded += ItemAdded;
         Equipment.OnItemSwapStart += ItemSwapStart;
-        Equipment.OnItemSwapEnd += ItemSwapEnd;
+        Equipment.OnItemSwapEnd += ItemSwapEnd;       
+    }
+
+    private void Start()
+    {
+        Equipment.AddItem(ItemDatabase.GetItems()[0]);
     }
 
     private void ItemSwapStart(Vector2Int startIndex, Vector2Int endIndex)
