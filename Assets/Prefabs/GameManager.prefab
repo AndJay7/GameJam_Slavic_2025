@@ -151,8 +151,8 @@ MonoBehaviour:
   _itemsDatabase: {fileID: 11400000, guid: 7239880fbe5cbe742bcac262ec11f890, type: 2}
   _startEquipment: []
   _startQueue:
-  - {fileID: 11400000, guid: 14ba051bcb96f3b4d87f50a96740d784, type: 2}
-  - {fileID: 11400000, guid: 519bfeea72b7a2a4ebd085092ec3dfe7, type: 2}
+  - {fileID: 11400000, guid: d79efb7d6932fc142be86bac2a1d260c, type: 2}
+  - {fileID: 11400000, guid: 68b01df24d1ca954fb0fca45ec666723, type: 2}
 --- !u!114 &1242685722986094832
 MonoBehaviour:
   m_ObjectHideFlags: 0
