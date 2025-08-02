@@ -6,7 +6,7 @@ using UnityEngine;
 [System.Serializable]
 public abstract class Ability
 {
-    private readonly List<Booster> _boosters = new List<Booster>();
+    protected readonly List<Booster> _boosters = new List<Booster>();
 
     public void AddBooster(Booster booster)
     {
