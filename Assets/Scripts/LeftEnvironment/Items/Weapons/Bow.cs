@@ -9,10 +9,13 @@ using Cysharp.Threading.Tasks;
 [System.Serializable]
 public class Bow : Weapon<BowAbility>
 {
+    public override Item Clone()
+    {
+        var weapon = new Bow();
+        weapon.Ability = Ability.Clone();
+        return weapon;
+    }
 }
-
-
-
 
 [System.Serializable]
 public class BowAbility : Ability
@@ -30,6 +33,17 @@ public class BowAbility : Ability
     private Quaternion extrarotation;
 
     private int iter;
+
+    public override Ability Clone()
+    {
+        var ability = new BowAbility();
+        ability.attack = attack;
+        ability.cooldown = cooldown;
+        ability.damage = damage;
+        ability.size = size;
+        ability.repeats = repeats;
+        return ability;
+    }
 
     public override void Activate()
     {

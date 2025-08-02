@@ -9,6 +9,12 @@ using Cysharp.Threading.Tasks;
 [System.Serializable]
 public class Sword : Weapon<SwordAbility>
 {
+    public override Item Clone()
+    {
+        var weapon = new Sword();
+        weapon.Ability = Ability.Clone();
+        return weapon;
+    }
 }
 
 
@@ -22,6 +28,17 @@ public class SwordAbility : Ability
     [SerializeField] float damage = 50f;
     [SerializeField] float size = 1f;
     [SerializeField] int repeats = 0;
+
+    public override Ability Clone()
+    {
+        var ability = new SwordAbility();
+        ability.attack = attack;
+        ability.cooldown = cooldown;
+        ability.damage = damage;
+        ability.size = size;
+        ability.repeats = repeats;
+        return ability;
+    }
 
     private int rememberdir;
 
