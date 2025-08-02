@@ -24,6 +24,8 @@ namespace Survivor
         [SerializeField]
         private float _flipCooldown;
         [SerializeField]
+        private bool _constant;
+        [SerializeField]
         private Rigidbody2D _rigidbody;
 
         private Vector2 _previousPosition;
@@ -44,6 +46,12 @@ namespace Survivor
             var velocity = velocityVector.magnitude;
             var velocitySqrt = Mathf.Sqrt(velocity);
             velocitySqrt = Mathf.MoveTowards(_previousVelocitySqrt, velocitySqrt, Mathf.Max(_previousVelocitySqrt * _roughness * Time.deltaTime, _roughnessMin));
+
+            if (_constant)
+            {
+                velocity = 1f;
+                velocitySqrt = 1f;
+            }
             
             _progress += velocitySqrt * _speed * Time.deltaTime;
             _progress %= Mathf.PI * 2f;

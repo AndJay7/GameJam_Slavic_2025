@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cfa66640826e0d34aaf1efdb79a1fab1
+guid: 018bdfb6a252a5847a9a972a764619dc
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -75,7 +75,7 @@ ScriptedImporter:
     importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 0
-    defaultPivotAlignment: 0
+    defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
     mosaicPadding: 4
     spritePadding: 0
@@ -88,7 +88,7 @@ ScriptedImporter:
     importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 0
-    defaultPivotAlignment: 0
+    defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
     mosaicPadding: 4
     spritePadding: 0
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638897555579341941
+  platformSettingsDirtyTick: 638897555045987238
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,98 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Chest
+  - name: BossShadow_Frame_0
     originalName: 
-    pivot: {x: 0.5, y: 0.05882353}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 104
-      width: 22
-      height: 17
-    spriteID: ccb9527fcc477cf4c89e5da736e7f285
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 104}
-  - name: Chest_Frame_1
-    originalName: 
-    pivot: {x: 0.47826087, y: 0.055555556}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 36
-      y: 77
-      width: 23
-      height: 18
-    spriteID: 0a15cad38d6ec0949b88498d16b78005
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 36, y: 77}
-  - name: Chest_Frame_2
-    originalName: 
-    pivot: {x: 0.45833334, y: 0.05263158}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 77
-      width: 24
-      height: 19
-    spriteID: 3d53c75702e94824bbcf9b4dd6fd04e4
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 77}
-  - name: Chest_Frame_3
-    originalName: 
-    pivot: {x: 0.51724136, y: 0.041666668}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 45
-      width: 29
-      height: 24
-    spriteID: d75ad4ab9fcae9d419d739fab18047c7
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 45}
-  - name: Chest_Frame_4
-    originalName: 
-    pivot: {x: 0.46511626, y: 0.030303031}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 43
-      height: 33
-    spriteID: 23891098be476d943b6f11aea355d496
+      width: 54
+      height: 11
+    spriteID: ecf115096d420a84e9d67d20723cfedb
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -224,52 +144,20 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1797307959
-    name: Chest
+    guid: 1337419287
+    name: BossShadow
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Chest_Frame_0
+    - name: BossShadow
       frameIndex: 0
       cellRect:
-        x: 53
-        y: 63
-        width: 22
-        height: 17
-      spriteId: ccb9527fcc477cf4c89e5da736e7f285
-    - name: Chest_Frame_1
-      frameIndex: 1
-      cellRect:
-        x: 53
-        y: 63
-        width: 23
-        height: 18
-      spriteId: 0a15cad38d6ec0949b88498d16b78005
-    - name: Chest_Frame_2
-      frameIndex: 2
-      cellRect:
-        x: 53
-        y: 63
-        width: 24
-        height: 19
-      spriteId: 3d53c75702e94824bbcf9b4dd6fd04e4
-    - name: Chest_Frame_3
-      frameIndex: 3
-      cellRect:
-        x: 49
-        y: 63
-        width: 29
-        height: 24
-      spriteId: d75ad4ab9fcae9d419d739fab18047c7
-    - name: Chest_Frame_4
-      frameIndex: 4
-      cellRect:
-        x: 44
-        y: 63
-        width: 43
-        height: 33
-      spriteId: 23891098be476d943b6f11aea355d496
+        x: 101
+        y: 0
+        width: 54
+        height: 11
+      spriteId: ecf115096d420a84e9d67d20723cfedb
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -324,4 +212,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 128, y: 128}
+  canvasSize: {x: 256, y: 256}
