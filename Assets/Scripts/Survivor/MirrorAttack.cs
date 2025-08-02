@@ -17,6 +17,9 @@ using UnityEngine;
             }
         }
 
+        public void DestroyMe() { Destroy(gameObject); }
+
+
         // Update is called once per frame
         /*
         void Update()
