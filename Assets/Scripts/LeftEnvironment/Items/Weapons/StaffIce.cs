@@ -1,8 +1,10 @@
+using Cysharp.Threading.Tasks;
+using Survivor;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
-using Survivor;
-using Cysharp.Threading.Tasks;
+using UnityEngine.Animations;
 
 [System.Serializable]
 public class StaffIce : Weapon<StaffIceAbility>
@@ -19,7 +21,19 @@ public class StaffIce : Weapon<StaffIceAbility>
 [System.Serializable]
 public class StaffIceAbility : Ability
 {
-//<<<<<<< Updated upstream
+    [SerializeField]
+    private PositionConstraint _effectPrefab;
+
+    private CancellationTokenSource tokenSource;
+    private ConstraintSource constraint;
+
+
+
+
+
+
+
+    //<<<<<<< Updated upstream
     public override Ability Clone()
     {
         throw new System.NotImplementedException();
@@ -42,7 +56,13 @@ public class StaffIceAbility : Ability
 
     public override void Activate()
     {
-  
+
+        
+        constraint = new ConstraintSource();
+        constraint.sourceTransform = PlayerMovement.Instance.transform;
+        constraint.weight = 1;
+
+
 
         isActive = true;
         StartLoop().Forget();
@@ -91,14 +111,21 @@ public class StaffIceAbility : Ability
                 }
 
 
-                GameObject instance = Object.Instantiate(attack, PlayerMovement.Instance.Playerlocation + new Vector2(0, 1), Quaternion.identity);
+                //GameObject instance = GameObject.Instantiate(attack, PlayerMovement.Instance.Playerlocation + new Vector2(0, 1), Quaternion.identity);
 
 
 
+                var effect = GameObject.Instantiate(_effectPrefab);
+                effect.AddSource(constraint);
 
-                instance.transform.localScale = new Vector3(realsize, realsize, 1);
+                //instance.transform.localScale = new Vector3(realsize, realsize, 1);
 
-                Transform colliderTransform = instance.transform.Find("Collider");
+                //Transform colliderTransform = instance.transform.Find("Collider");
+
+                effect.transform.localScale = new Vector3(realsize, realsize, 1);
+                Transform colliderTransform = effect.transform.Find("Collider");
+
+
                 DealSlow dealSlow = colliderTransform.GetComponent<DealSlow>();
                 dealSlow.duration = realduration;
 

@@ -18,8 +18,9 @@ MonoBehaviour:
     _description: Periodically freeze and delay monsters around hero
     _weight: 0.2
     _ability:
+      _effectPrefab: {fileID: 5409125640097528435, guid: 929fab249b9cd304581845f1c7897f60, type: 3}
       attack: {fileID: 2078909085287689874, guid: 929fab249b9cd304581845f1c7897f60, type: 3}
       cooldown: 5
-      size: 1
+      size: 2
       repeats: 0
       duration: 10
