@@ -1,5 +1,7 @@
+using Cysharp.Threading.Tasks;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,14 +9,15 @@ public class LeftPlayerController : MonoBehaviour
 {
     private LeftPlayer _leftPlayerInput;
 
-    private void Awake()
+    private void Start()
     {
         _leftPlayerInput = new LeftPlayer();
-        _leftPlayerInput.Main.Movement.performed += OnLeftPlayerMove;
+      //  _leftPlayerInput.Main.Movement.performed += OnLeftPlayerMove;
         _leftPlayerInput.Main.Select.performed += OnLeftPlayerSelect;
         _leftPlayerInput.Main.Add.performed += OnLeftPlayerAdd;
         _leftPlayerInput.Main.Clear.performed += OnLeftPlayerClear;
         _leftPlayerInput.Enable();
+        UpdatePlayerMovementAsync(this.destroyCancellationToken).Forget();
     }
 
     private void OnLeftPlayerClear(InputAction.CallbackContext obj)
@@ -50,14 +53,17 @@ public class LeftPlayerController : MonoBehaviour
             GameManager.Instance.Equipment.SelectItem();
     }
 
-    private void OnLeftPlayerMove(InputAction.CallbackContext obj)
+    public async UniTaskVoid UpdatePlayerMovementAsync(CancellationToken cancellation)
     {
-        if (!obj.performed)
-            return;
-        var value = obj.ReadValue<Vector2>();
-        var intValue = new Vector2Int();
-        intValue.x = Mathf.RoundToInt(value.x);
-        intValue.y = Mathf.RoundToInt(value.y);
-        GameManager.Instance.Equipment.SetFocusItem(intValue);
+        while (!cancellation.IsCancellationRequested)
+        {
+            var value = _leftPlayerInput.Main.Movement.ReadValue<Vector2>();
+            var intValue = new Vector2Int();
+            intValue.x = Mathf.RoundToInt(value.x);
+            intValue.y = Mathf.RoundToInt(value.y);
+            GameManager.Instance.Equipment.SetFocusItem(intValue);
+
+            await UniTask.WaitForSeconds(0.1f,cancellationToken:cancellation);
+        }
     }
 }
