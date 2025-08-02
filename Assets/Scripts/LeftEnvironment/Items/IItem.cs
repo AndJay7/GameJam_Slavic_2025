@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,4 +19,6 @@ public abstract class Item
     public string Name => _name;
     public string Description => _description;
     public float Weight => _weight;
+
+    public abstract Item Clone();
 }

@@ -13,6 +13,8 @@ public abstract class Ability
         _boosters.Add(booster);
     }
 
+    public abstract Ability Clone();
+
     public void RemoveBooster(Booster booster)
     {
         _boosters.Remove(booster);

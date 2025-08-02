@@ -9,6 +9,12 @@ using UnityEngine.Animations;
 [System.Serializable]
 public class StaffHeal : Weapon<StaffHealAbility>
 {
+    public override Item Clone()
+    {
+        var weapon = new StaffHeal();
+        weapon.Ability = Ability.Clone();
+        return weapon;
+    }
 }
 
 [System.Serializable]
@@ -23,6 +29,16 @@ public class StaffHealAbility : Ability
 
     private CancellationTokenSource tokenSource;
     private ConstraintSource constraint;
+
+    public override Ability Clone()
+    {
+        var ability = new StaffHealAbility();
+        ability._healValue = _healValue;
+        ability._cooldown = _cooldown;
+        ability._effectPrefab = _effectPrefab;
+
+        return ability;
+    }
 
     public override void Activate()
     {

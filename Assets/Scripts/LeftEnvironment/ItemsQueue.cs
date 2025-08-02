@@ -12,6 +12,7 @@ public class ItemsQueue
 
     public void Enqueue(Item item)
     {
+        var itemInstance = item.Clone();
         Items.Enqueue(item);
         OnItemAdded?.Invoke(item);
     }
