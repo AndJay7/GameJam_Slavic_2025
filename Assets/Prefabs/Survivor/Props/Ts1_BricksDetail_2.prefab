@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4698534635657626880}
   - component: {fileID: 6851554876681173425}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ts1_BricksDetail_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
