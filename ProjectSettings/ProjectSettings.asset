@@ -78,8 +78,8 @@ PlayerSettings:
   androidFullscreenMode: 1
   androidAutoRotationBehavior: 1
   androidApplicationEntry: 1
-  defaultIsNativeResolution: 1
-  macRetinaSupport: 1
+  defaultIsNativeResolution: 0
+  macRetinaSupport: 0
   runInBackground: 0
   captureSingleScreen: 0
   muteOtherAudioSources: 0
