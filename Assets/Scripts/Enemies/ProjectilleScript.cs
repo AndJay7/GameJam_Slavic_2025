@@ -31,9 +31,15 @@ namespace Survivor
             transform.Translate(ToPlayer * Time.fixedDeltaTime * speed);
         }
 
-        void OnCollisionEnter2D()
+        void OnTriggerEnter2D(Collider2D collision)
         {
-            Destroy(gameObject);
+            if (collision.gameObject.tag == "Player")
+            {
+                Destroy(gameObject);
+
+            }
+
+            
 
 
         }

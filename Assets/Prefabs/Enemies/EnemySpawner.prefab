@@ -47,8 +47,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waveinterval: 0
   Enemy1: {fileID: 2134876327840926819, guid: ae3d05613f1036a46ac9a92d03ec6f91, type: 3}
-  Enemy2: {fileID: 6686076592703133766, guid: 5677308378febd24dad358a4a7ddd35e, type: 3}
-  Enemy3: {fileID: 2134876327840926819, guid: ae3d05613f1036a46ac9a92d03ec6f91, type: 3}
+  Enemy2: {fileID: 2134876327840926819, guid: 3628c2c912284604d832aeb26f51cd6b, type: 3}
+  Enemy3: {fileID: 6686076592703133766, guid: 5677308378febd24dad358a4a7ddd35e, type: 3}
 --- !u!114 &636935307844264057
 MonoBehaviour:
   m_ObjectHideFlags: 0
