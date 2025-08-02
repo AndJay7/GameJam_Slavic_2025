@@ -17,3 +17,9 @@ MonoBehaviour:
     _name: Staff of Ice
     _description: Periodically freeze and delay monsters around hero
     _weight: 0.2
+    _ability:
+      attack: {fileID: 2078909085287689874, guid: 929fab249b9cd304581845f1c7897f60, type: 3}
+      cooldown: 5
+      size: 1
+      repeats: 0
+      duration: 10

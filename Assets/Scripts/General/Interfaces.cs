@@ -8,3 +8,10 @@ public interface IHealth
     void TakeDamage(float damage);
     float DealDamage();
 }
+
+public interface ISpeed
+{
+    void Slow(float fraction, float duration);
+
+
+}

@@ -8,7 +8,7 @@ using Random = UnityEngine.Random;
 
 namespace Survivor
 {
-    public class EnemyMovement : MonoBehaviour
+    public class EnemyMovement : MonoBehaviour, ISpeed
     {
         [SerializeField]
         private Movement _movement;
@@ -18,6 +18,10 @@ namespace Survivor
 
         [SerializeField]
         private float _scaleWithDistanceOffset;
+
+        private float fractionspeed = 1f;
+
+        private float countdown = 0f;
 
         private void FixedUpdate()
         {
@@ -32,7 +36,7 @@ namespace Survivor
 
                 movementVector *= distance + _scaleWithDistanceOffset;
                 
-                _movement.Move(movementVector, Time.fixedDeltaTime);
+                _movement.Move(movementVector*fractionspeed, Time.fixedDeltaTime);
             }
             else
             {
@@ -40,17 +44,57 @@ namespace Survivor
                 {
                     movementVector = movementVector.normalized;
 
-                    _movement.Move(movementVector * 10, Time.fixedDeltaTime);
+                    _movement.Move(movementVector * fractionspeed * 10, Time.fixedDeltaTime);
                 }
                 else
                 {
                     movementVector = movementVector.normalized;
 
-                    _movement.Move(movementVector, Time.fixedDeltaTime);
+                    _movement.Move(movementVector*fractionspeed, Time.fixedDeltaTime);
                 }
+            }
+
+            if(countdown > 0) 
+            {
+                countdown -= Time.fixedDeltaTime;
+            }
+            else
+            {
+                if(fractionspeed != 1f)
+                {
+                    fractionspeed = 1f;
+                }
+
             }
 
             transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.y * 0.01f);
         }
+
+
+
+        public void Slow(float fraction, float duration)
+        {
+            fractionspeed = fraction;
+
+
+            countdown = duration;
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }

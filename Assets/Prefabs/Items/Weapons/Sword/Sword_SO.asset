@@ -21,5 +21,5 @@ MonoBehaviour:
       attack: {fileID: 8560452317840366388, guid: 27f607ff5e4fdf84c8dcd3e8084d9185, type: 3}
       cooldown: 1
       damage: 100
-      size: 5
-      repeats: 1
+      size: 2
+      repeats: 5
