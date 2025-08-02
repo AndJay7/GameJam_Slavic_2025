@@ -169,6 +169,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 400053031516194753, guid: 47c3b3ab32f274b4599066046c0d8a1f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2030618001054647370, guid: 47c3b3ab32f274b4599066046c0d8a1f, type: 3}
       propertyPath: m_Name
       value: Boss
@@ -233,8 +237,13 @@ PrefabInstance:
       propertyPath: damagetoplayer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 8485370245228408943, guid: 47c3b3ab32f274b4599066046c0d8a1f, type: 3}
+      propertyPath: m_Name
+      value: BossHealthBarBg
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 400053031516194753, guid: 47c3b3ab32f274b4599066046c0d8a1f, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2030618001054647370, guid: 47c3b3ab32f274b4599066046c0d8a1f, type: 3}
@@ -471,8 +480,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8656112506945404458, guid: 775750a9bdf60834f9eaced41a55e280, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
