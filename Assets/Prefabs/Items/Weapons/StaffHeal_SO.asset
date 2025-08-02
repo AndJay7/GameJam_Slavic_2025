@@ -17,3 +17,7 @@ MonoBehaviour:
     _name: Staff of Healing
     _description: Periodically heal hero
     _weight: 0.5
+    _ability:
+      _healValue: 2
+      _cooldown: 2
+      _effectPrefab: {fileID: 3043772673667506000, guid: dff99465351c73746aac8eb743fe99c0, type: 3}
