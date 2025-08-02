@@ -19,12 +19,12 @@ public class StaffIce : Weapon<StaffIceAbility>
 [System.Serializable]
 public class StaffIceAbility : Ability
 {
-<<<<<<< Updated upstream
+//<<<<<<< Updated upstream
     public override Ability Clone()
     {
         throw new System.NotImplementedException();
     }
-=======
+//=======
     [SerializeField] GameObject attack;
     [SerializeField] float cooldown = 2f;
     
@@ -38,7 +38,7 @@ public class StaffIceAbility : Ability
     private bool isActive = false;
 
     [SerializeField] float duration = 5f;
->>>>>>> Stashed changes
+//>>>>>>> Stashed changes
 
     public override void Activate()
     {
