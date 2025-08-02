@@ -125,7 +125,7 @@ ScriptedImporter:
     originalName: 
     pivot: {x: 0.75, y: 0.4666667}
     alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 18, y: 0, z: 6, w: 0}
     rect:
       serializedVersion: 2
       x: 4
@@ -145,11 +145,11 @@ ScriptedImporter:
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 5, y: 0, z: 5, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 27
+      y: 48
       width: 10
       height: 4
     spriteID: 391d00603607a6341b2381adb8757271
@@ -160,7 +160,47 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+    uvTransform: {x: 4, y: 48}
+  - name: HealthBarBg
+    originalName: 
+    pivot: {x: 0.71428573, y: 0.3846154}
+    alignment: 9
+    border: {x: 15, y: 0, z: 6, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 27
+      width: 21
+      height: 13
+    spriteID: eed8abef542f68a4f913fde418ed5954
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
     uvTransform: {x: 4, y: 27}
+  - name: HealtBarTop
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 5, y: 0, z: 5, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 36
+      y: 4
+      width: 10
+      height: 4
+    spriteID: aa01f52efbf2ede4fbfb8c69a709a587
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 36, y: 4}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 2
@@ -195,6 +235,40 @@ ScriptedImporter:
         width: 10
         height: 4
       spriteId: 391d00603607a6341b2381adb8757271
+    linkedCells: []
+    parentIndex: -1
+  - layerIndex: 0
+    guid: 1892481834
+    name: HealthBarBg
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: HealthBarBg
+      frameIndex: 0
+      cellRect:
+        x: 49
+        y: 59
+        width: 21
+        height: 13
+      spriteId: eed8abef542f68a4f913fde418ed5954
+    linkedCells: []
+    parentIndex: -1
+  - layerIndex: 1
+    guid: -545528947
+    name: HealtBarTop
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: HealtBarTop
+      frameIndex: 0
+      cellRect:
+        x: 59
+        y: 62
+        width: 10
+        height: 4
+      spriteId: aa01f52efbf2ede4fbfb8c69a709a587
     linkedCells: []
     parentIndex: -1
   platformSettings:
