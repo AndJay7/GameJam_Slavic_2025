@@ -16,3 +16,4 @@ MonoBehaviour:
     _icon: {fileID: -803234059, guid: b002caccf378428498db4f07a28df13a, type: 3}
     _name: Staff of Ice
     _description: Periodically freeze and delay monsters around hero
+    _weight: 0.2

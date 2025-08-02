@@ -16,6 +16,7 @@ MonoBehaviour:
     _icon: {fileID: -1513709173, guid: b002caccf378428498db4f07a28df13a, type: 3}
     _name: Rune of Time
     _description: Duration of near weapon effects is doubled
+    _weight: 0.7
     _spawnRateModifier:
       _operatorIndex: -1
       _value: 0

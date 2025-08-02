@@ -16,3 +16,4 @@ MonoBehaviour:
     _icon: {fileID: 1161201145128540330, guid: b002caccf378428498db4f07a28df13a, type: 3}
     _name: Sword
     _description: Hit monsters in front of hero
+    _weight: 1

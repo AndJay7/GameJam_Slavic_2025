@@ -30,7 +30,8 @@ namespace Survivor
 
                 _movement.Move(movementVector, Time.fixedDeltaTime);
             }
-            
+
+            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.y * 0.01f);
         }
     }
 }

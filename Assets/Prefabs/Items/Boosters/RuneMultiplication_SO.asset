@@ -16,6 +16,7 @@ MonoBehaviour:
     _icon: {fileID: -558633908, guid: b002caccf378428498db4f07a28df13a, type: 3}
     _name: Rune of Multiplication
     _description: Near weapons are used one more time
+    _weight: 0.3
     _spawnRateModifier:
       _operatorIndex: -1
       _value: 0
