@@ -11,12 +11,18 @@ public class LeftPlayerController : MonoBehaviour
 
     private void Start()
     {
-        _leftPlayerInput = new LeftPlayer();
-      //  _leftPlayerInput.Main.Movement.performed += OnLeftPlayerMove;
+        _leftPlayerInput = null;
+        if (InputManager.Instance == null)
+        {
+            _leftPlayerInput = new LeftPlayer();
+            _leftPlayerInput.Enable();
+        }
+        else
+            _leftPlayerInput = InputManager.Instance.LeftPlayerActions;
+
         _leftPlayerInput.Main.Select.performed += OnLeftPlayerSelect;
         _leftPlayerInput.Main.Add.performed += OnLeftPlayerAdd;
         _leftPlayerInput.Main.Clear.performed += OnLeftPlayerClear;
-        _leftPlayerInput.Enable();
         UpdatePlayerMovementAsync(this.destroyCancellationToken).Forget();
     }
 

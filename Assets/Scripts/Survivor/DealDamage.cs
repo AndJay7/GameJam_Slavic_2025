@@ -21,7 +21,7 @@ public class DealDamage : MonoBehaviour
         
         if (continous == false)
         {
-            if (collision.gameObject.tag == "enemy")
+            if (collision.gameObject.tag == "enemy" || collision.gameObject.tag == "boss")
             {
                 if (collision.gameObject.TryGetComponent(out IHealth something))
                 {
