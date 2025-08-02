@@ -41,7 +41,7 @@ public class Itemspawner : MonoBehaviour
         else
         {
             itemstospawn++;
-            Debug.Log(itemstospawn);
+            //Debug.Log(itemstospawn);
             itemtimer = 4f;
 
         }

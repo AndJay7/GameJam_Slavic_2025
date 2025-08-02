@@ -84,6 +84,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 50
   continous: 0
+  skip: 2
 --- !u!1 &8560452317840366388
 GameObject:
   m_ObjectHideFlags: 0

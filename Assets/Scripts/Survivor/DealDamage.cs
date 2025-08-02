@@ -8,6 +8,13 @@ public class DealDamage : MonoBehaviour
 
     public bool continous;
 
+    public int startskip = 2;
+
+    public int skip = 2;
+
+    public bool iscapped = false;
+
+    public int cap = 5;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -21,7 +28,14 @@ public class DealDamage : MonoBehaviour
                     something.TakeDamage(damage);
 
                 }
-
+                if(iscapped == true) 
+                { 
+                    cap--;
+                    if (cap < 1)
+                    {
+                       Destroy(transform.parent.gameObject);
+                    }
+                }
             }
         }
     }
@@ -30,15 +44,37 @@ public class DealDamage : MonoBehaviour
     {
         if (continous == true)
         {
+            
             if (collision.gameObject.tag == "enemy")
             {
-                if (collision.gameObject.TryGetComponent(out IHealth something))
+                if (skip == 0)
+                {
+
+                    if (collision.gameObject.TryGetComponent(out IHealth something))
                 {
                     something.TakeDamage(damage);
 
                 }
-
-            }
+                    if (iscapped == true)
+                    {
+                        cap--;
+                        if (cap < 1)
+                        {
+                            Destroy(transform.parent.gameObject);
+                        }
+                    }
+                    skip = startskip;
+                }
+                else
+                    {
+                        skip--;
+                    }
+                    
+                
+             
+                
+             }
+            
         }
     }
 }
