@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6892383812753684261}
   - component: {fileID: 4169128526142985562}
   - component: {fileID: 8709104400623069374}
+  - component: {fileID: 73887328172619559}
   m_Layer: 0
   m_Name: Boss
   m_TagString: enemy
@@ -137,6 +138,30 @@ CapsuleCollider2D:
   m_Offset: {x: 0.011359258, y: 0.3452458}
   m_Size: {x: 2.8152306, y: 0.54197794}
   m_Direction: 1
+--- !u!114 &73887328172619559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030618001054647370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e22de078e8012947bf96ca21a4c4d8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cooldown:
+    x: 5
+    y: 8
+  _attackCount:
+    x: 9
+    y: 23
+  _attackDelay:
+    x: 0.08
+    y: 0.18
+  _attackRandomRadius: 9
+  _attackPredictionTime: 1.75
+  _instancePrefab: {fileID: 416198565693284050, guid: a84615dca90a4624092c7ee3a63f1fd1, type: 3}
 --- !u!1001 &1672909248638904279
 PrefabInstance:
   m_ObjectHideFlags: 0

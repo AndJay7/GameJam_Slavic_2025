@@ -337,8 +337,8 @@ MonoBehaviour:
   _health: {fileID: 5442280393785027054}
   Playerlocation: {x: 0, y: 0}
   _movement:
-    _acceleration: 288
-    _speed: 15
+    _acceleration: 96
+    _speed: 5
     _rigidbody: {fileID: 5996355916806543169}
 --- !u!50 &5996355916806543169
 Rigidbody2D:

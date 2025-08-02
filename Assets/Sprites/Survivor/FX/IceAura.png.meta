@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: d0fed3400dbf14c43b71a4faff6e7d17
+guid: f53dcdf647e1fb1479f267a192fbe7dc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6937817954938267909
-    second: 2_0
+      213: -7784461560621220747
+    second: IceAura_0
+  - first:
+      213: 2572994908732388511
+    second: IceAura_1
+  - first:
+      213: 1571637387753798338
+    second: IceAura_2
+  - first:
+      213: -4573417459421255086
+    second: IceAura_3
+  - first:
+      213: 2631265274604563805
+    second: IceAura_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +49,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -74,7 +86,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -126,13 +138,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 2_0
+      name: IceAura_0
       rect:
         serializedVersion: 2
-        x: 34
-        y: 31
-        width: 78
-        height: 114
+        x: 26
+        y: 90
+        width: 16
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +152,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5092c600ca4184060800000000000000
-      internalID: 6937817954938267909
+      spriteID: 57c3d77547908f390800000000000000
+      internalID: -7784461560621220747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceAura_1
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 85
+        width: 29
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f94f1e7bc3d15b320800000000000000
+      internalID: 2572994908732388511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceAura_2
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 78
+        width: 41
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cab9c490e39fc510800000000000000
+      internalID: 1571637387753798338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceAura_3
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 7
+        width: 56
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25a60a93d05f780c0800000000000000
+      internalID: -4573417459421255086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceAura_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1
+        width: 65
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5d20a283d1248420800000000000000
+      internalID: 2631265274604563805
       vertices: []
       indices: 
       edges: []
@@ -157,7 +253,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      2_0: 6937817954938267909
+      IceAura_0: -7784461560621220747
+      IceAura_1: 2572994908732388511
+      IceAura_2: 1571637387753798338
+      IceAura_3: -4573417459421255086
+      IceAura_4: 2631265274604563805
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
