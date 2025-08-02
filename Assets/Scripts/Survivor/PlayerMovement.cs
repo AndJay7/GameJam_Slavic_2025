@@ -28,6 +28,10 @@ namespace Survivor
         [SerializeField]
         private Movement _movement;
 
+        private Vector2 _latestMovementDirection;
+        
+        public Vector2 LatestMovementDirection => _latestMovementDirection;
+
         private void FixedUpdate()
         {
             var movementVector = Vector2.zero;
@@ -43,6 +47,9 @@ namespace Survivor
 
             if(movementVector.sqrMagnitude > 1f)
                 movementVector.Normalize();
+            
+            if(movementVector.sqrMagnitude > 1e-3f)
+                _latestMovementDirection = movementVector.normalized;
             
             _movement.Move(movementVector, Time.fixedDeltaTime);
 

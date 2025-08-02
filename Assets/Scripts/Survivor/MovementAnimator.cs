@@ -20,12 +20,18 @@ namespace Survivor
         [SerializeField]
         private float _roughnessMin;
         [SerializeField]
+        private bool _flippable;
+        [SerializeField]
+        private float _flipCooldown;
+        [SerializeField]
         private Rigidbody2D _rigidbody;
 
-        private Vector3 _previousPosition;
+        private Vector2 _previousPosition;
         private float _previousVelocitySqrt;
         
         private float _progress;
+
+        private float _flipTime;
 
         private void OnEnable()
         {
@@ -34,7 +40,8 @@ namespace Survivor
 
         private void Update()
         {
-            var velocity = _rigidbody == null ? ((_previousPosition - transform.position).magnitude / Time.deltaTime) : _rigidbody.velocity.magnitude;
+            var velocityVector = _rigidbody == null ? ((_previousPosition - (Vector2)transform.position) / Time.deltaTime) : _rigidbody.velocity;
+            var velocity = velocityVector.magnitude;
             var velocitySqrt = Mathf.Sqrt(velocity);
             velocitySqrt = Mathf.MoveTowards(_previousVelocitySqrt, velocitySqrt, Mathf.Max(_previousVelocitySqrt * _roughness * Time.deltaTime, _roughnessMin));
             
@@ -48,6 +55,12 @@ namespace Survivor
             
             _previousPosition = transform.position;
             _previousVelocitySqrt = velocitySqrt;
+
+            if (_flippable && Time.time > _flipTime && transform.localScale.x * velocityVector.x < 0f)
+            {
+                transform.localScale = new Vector3(transform.localScale.x * -1f, 1f, 1f);
+                _flipTime = Time.time + _flipCooldown;
+            }
         }
     }
 }

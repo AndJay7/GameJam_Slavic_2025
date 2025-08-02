@@ -390,7 +390,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 4072004615145434441, guid: 031a700a217fad646b99eab55c8cbe42, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -411,9 +411,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2601185751fd209468f65443a876706d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _angle: 5
-  _offset: 0.05
-  _speed: 10
+  _angle: 4
+  _offset: 0.045
+  _speed: 9
   _roughness: 16777216
   _roughnessMin: 16777216
+  _flippable: 1
+  _flipCooldown: 0.0625
   _rigidbody: {fileID: 5996355916806543169}
