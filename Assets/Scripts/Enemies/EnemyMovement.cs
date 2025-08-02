@@ -17,9 +17,20 @@ namespace Survivor
         {
             Vector2 movementVector = -transform.position;
             movementVector += PlayerMovement.Instance.Playerlocation;
-            movementVector = movementVector.normalized;
 
-            _movement.Move(movementVector, Time.fixedDeltaTime);
+            if(movementVector.magnitude > 20)
+            {
+                movementVector = movementVector.normalized;
+
+                _movement.Move(movementVector*10, Time.fixedDeltaTime);
+            }
+            else 
+            {
+                movementVector = movementVector.normalized;
+
+                _movement.Move(movementVector, Time.fixedDeltaTime);
+            }
+            
         }
     }
 }

@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 2134876327840926819}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.53, y: 0.3740603, z: 0.061696142}
+  m_LocalPosition: {x: 2.53, y: 0.3740603, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -129,6 +129,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   starthealth: 100
   damagetoplayer: 5
+  popup: {fileID: 2120227304558949165, guid: 6d3b60096f84f0b49a4cec5e70082d48, type: 3}
+  pickup: {fileID: 7450918006906196047, guid: aa4aebac82f43064d868e241f33a5368, type: 3}
 --- !u!1 &8117702710614671103
 GameObject:
   m_ObjectHideFlags: 0

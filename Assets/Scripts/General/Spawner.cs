@@ -61,8 +61,20 @@ namespace Survivor
                 if (enemycount <= 0)
                 {
                     iteration++;
-                    enemycount = bigwaves[iteration];
-                    wavesize = wavesizes[iteration];
+                    ////////////////////////////////////////////////
+                    if (iteration == 3)
+                    {
+                        Destroy(gameObject);
+                    }
+                    else
+                    {
+                        enemycount = bigwaves[iteration];
+                        wavesize = wavesizes[iteration];
+
+                    }
+                    /////////////////////////////////////////////////
+
+                    
 
 
                     if(iteration == 1)
@@ -75,7 +87,11 @@ namespace Survivor
                         {
                             currentEnemy = Enemy3;
                         }
+                        
+                           
+                        
                     }
+                    
 
 
 
@@ -102,8 +118,10 @@ namespace Survivor
 
             while (wavesize > 0)
             {
+                Vector3 offset = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f),0);
 
-                Instantiate(enemy, location, Quaternion.identity);
+
+                Instantiate(enemy, location+offset, Quaternion.identity);
                 wavesize--;
                 yield return null;
             }
