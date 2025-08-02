@@ -1,36 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1096134847256320024
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4364381889600929076}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4364381889600929076
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1096134847256320024}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4698534635657626880}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4540315258386194086
 GameObject:
   m_ObjectHideFlags: 0
@@ -42,7 +11,7 @@ GameObject:
   - component: {fileID: 4698534635657626880}
   - component: {fileID: 6851554876681173425}
   - component: {fileID: 1305521948478616589}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ts1_Swamp_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,7 +33,6 @@ Transform:
   m_Children:
   - {fileID: 4796703900184980834}
   - {fileID: 3388304388861222402}
-  - {fileID: 4364381889600929076}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6851554876681173425
@@ -148,7 +116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3388304388861222402}
   - component: {fileID: 7012829890016153744}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GrassSpawner (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -205,7 +173,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4796703900184980834}
   - component: {fileID: 5963282170893983658}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GrassSpawner (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

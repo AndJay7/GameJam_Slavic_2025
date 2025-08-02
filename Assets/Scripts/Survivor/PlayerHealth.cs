@@ -4,19 +4,22 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
+    public float maxHealth = 200f;
     public float health = 200f;
     public float multiplier = 5f;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+    
+    [SerializeField]
+    private Transform _healthBar;
 
     void FixedUpdate()
     {
         health -= Time.fixedDeltaTime * multiplier;
         multiplier = 0f;
 
+        if (_healthBar != null)
+        {
+            _healthBar.localScale = new Vector3(Mathf.Max(0f, health / maxHealth), 1f, 1f);
+        }
     }
 
     void OnCollisionStay2D(Collision2D collision)

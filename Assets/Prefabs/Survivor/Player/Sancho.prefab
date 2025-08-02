@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 953600845536643990}
   - component: {fileID: 6862884958666914798}
   - component: {fileID: 3134909947650842307}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sancho
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 6851563291654945880}
   - component: {fileID: 884333729203751479}
   - component: {fileID: 1321114943959426340}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
