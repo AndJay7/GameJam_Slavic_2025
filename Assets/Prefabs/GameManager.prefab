@@ -150,7 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _itemsDatabase: {fileID: 11400000, guid: 7239880fbe5cbe742bcac262ec11f890, type: 2}
   _startEquipment:
-  - {fileID: 11400000, guid: 8128c1a4dea1e2243a2e18b46ab2d14b, type: 2}
+  - {fileID: 11400000, guid: d79efb7d6932fc142be86bac2a1d260c, type: 2}
   _startQueue: []
 --- !u!114 &1242685722986094832
 MonoBehaviour:

@@ -184,6 +184,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 195539689446926618, guid: 45f6dce605de3af4fa8862f8b566667a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.6011963
+      objectReference: {fileID: 0}
     - target: {fileID: 4894908373522027369, guid: 45f6dce605de3af4fa8862f8b566667a, type: 3}
       propertyPath: m_Name
       value: LeftEnvironment
@@ -226,6 +230,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4998870337805651315, guid: 45f6dce605de3af4fa8862f8b566667a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308018962044425356, guid: 45f6dce605de3af4fa8862f8b566667a, type: 3}
+      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
