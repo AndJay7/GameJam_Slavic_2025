@@ -260,7 +260,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 6627486483258544107, guid: 0d692d30ef93fc64381d91f84d0a91f6, type: 3}
+  m_Sprite: {fileID: 1509255401479474098, guid: 0d692d30ef93fc64381d91f84d0a91f6, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -525,6 +525,7 @@ MonoBehaviour:
   _roughnessMin: 16777216
   _flippable: 1
   _flipCooldown: 0.0625
+  _constant: 0
   _rigidbody: {fileID: 5996355916806543169}
 --- !u!1001 &1003374763018671822
 PrefabInstance:
@@ -534,14 +535,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179259207223114772}
     m_Modifications:
-    - target: {fileID: 4755156296129688506, guid: 567923829add2104a926484c3ce7f6b5, type: 3}
-      propertyPath: m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4755156296129688506, guid: 567923829add2104a926484c3ce7f6b5, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 7536338318695541172, guid: 0d692d30ef93fc64381d91f84d0a91f6, type: 3}
     - target: {fileID: 4755156296129688506, guid: 567923829add2104a926484c3ce7f6b5, type: 3}
       propertyPath: m_PixelsPerUnitMultiplier
       value: 0.21666667
