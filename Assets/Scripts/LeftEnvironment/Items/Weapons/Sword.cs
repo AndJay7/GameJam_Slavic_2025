@@ -29,6 +29,7 @@ public class SwordAbility : Ability
 
     private bool isActive = false;
 
+    private int right = 1;
 
     public override void Activate()
     {
@@ -102,7 +103,17 @@ public class SwordAbility : Ability
                 }
 
 
-                GameObject instance = Object.Instantiate(attack, PlayerMovement.Instance.Playerlocation + new Vector2(correcteddir * 2 + iteration * 2 * correcteddir, 1), Quaternion.identity);
+                GameObject instance = Object.Instantiate(attack, PlayerMovement.Instance.Playerlocation + new Vector2(right * 2 , 1), Quaternion.identity);
+
+                if(right == 1)
+                {
+                    right = -1;
+                }
+                else
+                {
+                    right = 1;
+                }
+
 
                 instance.transform.localScale = new Vector3(realsize, realsize, 1);
 
