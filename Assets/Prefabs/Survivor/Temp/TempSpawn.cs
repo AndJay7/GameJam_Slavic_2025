@@ -7,13 +7,32 @@ namespace Survivor
 {
     public class TempSpawn : MonoBehaviour
     {
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         private float countdown = 1f;
 
         [SerializeField] GameObject attack;
         // Start is called before the first frame update
         void Start()
         {
-
+          
         }
 
         // Update is called once per frame

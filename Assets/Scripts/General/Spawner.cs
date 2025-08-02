@@ -64,7 +64,7 @@ namespace Survivor
                     ////////////////////////////////////////////////
                     if (iteration == 3)
                     {
-                        Destroy(gameObject);
+                        Destroy(this);
                     }
                     else
                     {

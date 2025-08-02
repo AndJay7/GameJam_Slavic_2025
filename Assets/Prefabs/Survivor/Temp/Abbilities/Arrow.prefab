@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48f2bf077d828124eaa7a7088c965a34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 10
   istimed: 0
   duration: 5
 --- !u!1 &6107034554453193172
@@ -61,7 +61,7 @@ GameObject:
   - component: {fileID: 3863595991584097330}
   - component: {fileID: 1847316482563765516}
   m_Layer: 7
-  m_Name: Square
+  m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148,12 +148,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b3fb4b0308971e42b9f81124ec0a6b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
+  damage: 30
   continous: 0
   startskip: 2
   skip: 2
   iscapped: 1
-  cap: 2
+  cap: 4
 --- !u!61 &1847316482563765516
 BoxCollider2D:
   m_ObjectHideFlags: 0
