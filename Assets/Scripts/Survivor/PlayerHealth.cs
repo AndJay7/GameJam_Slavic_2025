@@ -57,6 +57,9 @@ public class PlayerHealth : MonoBehaviour
     {
         health += addHealth;
         health = Mathf.Clamp(health, 0, maxHealth);
+
+        if (health == 0)
+            UnityEngine.SceneManagement.SceneManager.LoadScene("LoseScreen", UnityEngine.SceneManagement.LoadSceneMode.Single);
     }
     void OnTriggerStay2D(Collider2D collision)
     {
