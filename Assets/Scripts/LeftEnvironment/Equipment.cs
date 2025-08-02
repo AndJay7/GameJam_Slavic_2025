@@ -15,19 +15,19 @@ public class Equipment
     public Vector2Int SelectIndex => _selectionIndex;
     public Vector2Int FocusIndex => _focusIndex;
     public Vector2Int PreviousFocusIndex => _previousFocusIndex;
+    public const int GridSize = 40;
 
-    private const int _gridSize = 40;
-    private readonly ItemSlot[,] _itemSlots = new ItemSlot[_gridSize, _gridSize];
-    private Vector2Int _previousFocusIndex = new Vector2Int(_gridSize / 2, _gridSize / 2);
-    private Vector2Int _focusIndex = new Vector2Int(_gridSize / 2, _gridSize / 2);
+    private readonly ItemSlot[,] _itemSlots = new ItemSlot[GridSize, GridSize];
+    private Vector2Int _previousFocusIndex = new Vector2Int(GridSize / 2, GridSize / 2);
+    private Vector2Int _focusIndex = new Vector2Int(GridSize / 2, GridSize / 2);
 
     private Vector2Int _selectionIndex = new Vector2Int(-1, -1);
 
     public void SetFocusItem(Vector2Int offset)
     {
         var newFocus = _focusIndex + offset;
-        newFocus.x = Mathf.Clamp(newFocus.x, 0, _gridSize);
-        newFocus.y = Mathf.Clamp(newFocus.y, 0, _gridSize);
+        newFocus.x = Mathf.Clamp(newFocus.x, 0, GridSize-1);
+        newFocus.y = Mathf.Clamp(newFocus.y, 0, GridSize-1);
 
         if(newFocus != _focusIndex)
         {
@@ -63,6 +63,8 @@ public class Equipment
 
         OnItemSwapStart?.Invoke(_selectionIndex, _focusIndex);
         (startSlot.item, endSlot.item) = (endSlot.item, startSlot.item);
+        _itemSlots[_selectionIndex.x, _selectionIndex.y] = startSlot;
+        _itemSlots[_focusIndex.x, _focusIndex.y] = endSlot;
         OnItemSwapEnd?.Invoke(_selectionIndex, _focusIndex);
     }
 
@@ -99,7 +101,7 @@ public class Equipment
     public bool IsIndexValid(Vector2Int index)
     {
         var minValid = index.x >= 0 && index.y >= 0;
-        var maxValid = index.x < _gridSize && index.y < _gridSize;
+        var maxValid = index.x < GridSize && index.y < GridSize;
         return minValid && maxValid;
     }
 

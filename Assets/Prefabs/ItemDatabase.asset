@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d4baa13d5d321c489419d39c5e9bcf8, type: 3}
   m_Name: ItemDatabase
   m_EditorClassIdentifier: 
+  _weaponBackground: {fileID: 8663109747027047156, guid: 4ce7af7d8b4e066469e437650273b14c, type: 3}
+  _boosterBackground: {fileID: 7116429430202067393, guid: 74190ae51c2202f419ee9640fd812d9b, type: 3}
   _list:
+  - {fileID: 11400000, guid: d79efb7d6932fc142be86bac2a1d260c, type: 2}
+  - {fileID: 11400000, guid: 6e183a489078e204e94e610283565839, type: 2}
   - {fileID: 11400000, guid: 05cf073ed4e1b674cad0e3ffa1cfa210, type: 2}
   - {fileID: 11400000, guid: 14ba051bcb96f3b4d87f50a96740d784, type: 2}
   - {fileID: 11400000, guid: 8128c1a4dea1e2243a2e18b46ab2d14b, type: 2}
-  - {fileID: 11400000, guid: 6e183a489078e204e94e610283565839, type: 2}
-  - {fileID: 11400000, guid: d79efb7d6932fc142be86bac2a1d260c, type: 2}

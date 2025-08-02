@@ -7,10 +7,21 @@ using System.Linq;
 public class ItemDatabaseSO : ScriptableObject
 {
     [SerializeField]
+    private Sprite _weaponBackground;
+    [SerializeField]
+    private Sprite _boosterBackground;
+    [SerializeField]
     private List<ItemSO> _list = new List<ItemSO>();
+
+    public Sprite WeaponBackground => _weaponBackground;
+    public Sprite BoosterBackground => _boosterBackground;
+
+    private List<Item> _listCache = null;
 
     public List<Item> GetItems()
     {
-        return _list.Select(i => i.Item).ToList();
+        if (_listCache == null)
+            _listCache = _list.Select(i => i.Item).ToList();
+        return _listCache;
     }
 }
