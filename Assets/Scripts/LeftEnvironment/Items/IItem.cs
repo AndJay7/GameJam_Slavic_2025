@@ -9,7 +9,7 @@ public abstract class Item
     private Sprite _icon;
     [SerializeField]
     private string _name;
-    [SerializeField]
+    [SerializeField, Multiline]
     private string _description;
 
     public Sprite Icon => _icon;

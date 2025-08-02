@@ -3,20 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class RuneHeal : Weapon<RuneHealAbility>
+public class StaffHeal : Weapon<StaffHealAbility>
 {
 }
 
 [System.Serializable]
-public class RuneHealAbility : Ability
+public class StaffHealAbility : Ability
 {
     public override void Activate()
     {
-        throw new System.NotImplementedException();
     }
 
     public override void Stop()
     {
-        throw new System.NotImplementedException();
     }
 }
