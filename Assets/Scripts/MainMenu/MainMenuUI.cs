@@ -5,21 +5,24 @@ using TMPro;
 using System;
 using Cysharp.Threading.Tasks;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenuUI : MonoBehaviour
 {
     [SerializeField]
-    private TextMeshProUGUI _counterText;
+    private Image _counterImage;
     [SerializeField]
     private TextMeshProUGUI _leftPlayerText;
     [SerializeField]
     private TextMeshProUGUI _rightPlayerText;
     [SerializeField]
+    private Sprite[] _counter;
+    [SerializeField]
     private string _gameSceneName;
 
     private void Start()
     {
-        _counterText.text = string.Empty;
+        _counterImage.gameObject.SetActive(false);
         _leftPlayerText.text = "Click anything...";
         _rightPlayerText.text = string.Empty;
 
@@ -46,9 +49,10 @@ public class MainMenuUI : MonoBehaviour
 
     private async UniTaskVoid StartCounting()
     {
-        for(int i = 5; i > 0;i--)
+        _counterImage.gameObject.SetActive(true);
+        for (int i = 5; i > 0;i--)
         {
-            _counterText.text = i.ToString();
+            _counterImage.sprite = _counter[i - 1];
             await UniTask.WaitForSeconds(1);
         }
         gameObject.SetActive(false);
