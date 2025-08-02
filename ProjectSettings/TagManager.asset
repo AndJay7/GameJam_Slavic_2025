@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - enemy
   layers:
   - Default
   - TransparentFX
@@ -43,4 +44,16 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UI_ItemSlot
+    uniqueID: 3367821075
+    locked: 0
+  - name: UI_ItemSelection
+    uniqueID: 2530912037
+    locked: 0
+  - name: UI_ItemFocus
+    uniqueID: 869515459
+    locked: 0
+  - name: UI_ItemPreview
+    uniqueID: 3663953929
     locked: 0

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemSlot
+public struct ItemSlot
 {
     public Item item;
 }

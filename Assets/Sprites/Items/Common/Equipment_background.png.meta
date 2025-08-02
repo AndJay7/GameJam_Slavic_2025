@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4ce7af7d8b4e066469e437650273b14c
+guid: 3065c1e96d461b146ac4dd30142436cd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8663109747027047156
-    second: back_weapon_0
+      213: 7190648889362685668
+    second: baxkground_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: back_weapon_0
+      name: baxkground_0
       rect:
         serializedVersion: 2
         x: 0
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4f275c17a6c893870800000000000000
-      internalID: 8663109747027047156
+      spriteID: 4ee150331115ac360800000000000000
+      internalID: 7190648889362685668
       vertices: []
       indices: 
       edges: []
@@ -131,7 +131,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      back_weapon_0: 8663109747027047156
+      baxkground_0: 7190648889362685668
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

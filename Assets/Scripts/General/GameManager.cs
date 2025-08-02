@@ -9,6 +9,7 @@ public class GameManager : Singleton<GameManager>
     [SerializeField]
     private ItemDatabaseSO _itemsDatabase;
 
+    public ItemDatabaseSO ItemDatabase => _itemsDatabase;
     public ItemsQueue ItemsQueue { get; } = new ItemsQueue();
     public Equipment Equipment { get; } = new Equipment();
 
@@ -18,7 +19,6 @@ public class GameManager : Singleton<GameManager>
         Equipment.OnItemAdded += ItemAdded;
         Equipment.OnItemSwapStart += ItemSwapStart;
         Equipment.OnItemSwapEnd += ItemSwapEnd;
-
     }
 
     private void ItemSwapStart(Vector2Int startIndex, Vector2Int endIndex)
