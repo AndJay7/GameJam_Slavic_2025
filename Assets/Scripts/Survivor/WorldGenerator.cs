@@ -57,7 +57,7 @@ namespace Survivor
         [SerializeField]
         private int _gridSize;
         [SerializeField]
-        private Biome[] _biomes;
+        private Biome[] _biomes = new Biome[0];
 
         private Dictionary<int2, (Tile tile, RectInt rect)> _tileMap = new();
         private List<(Tile tile, RectInt rect)> _tileInstances = new();

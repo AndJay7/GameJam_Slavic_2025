@@ -130,8 +130,8 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 24
-      height: 22
+      width: 26
+      height: 23
     spriteID: c0f3780c4f125234fa161dec42a5ec6b
     spriteBone: []
     spriteOutline: []
@@ -153,10 +153,10 @@ ScriptedImporter:
     - name: Sancho
       frameIndex: 0
       cellRect:
-        x: 8
+        x: 7
         y: 8
-        width: 24
-        height: 22
+        width: 26
+        height: 23
       spriteId: c0f3780c4f125234fa161dec42a5ec6b
     linkedCells: []
     parentIndex: -1
