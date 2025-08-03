@@ -153,7 +153,7 @@ MonoBehaviour:
   startskip: 2
   skip: 2
   iscapped: 1
-  cap: 4
+  cap: 6
 --- !u!61 &1847316482563765516
 BoxCollider2D:
   m_ObjectHideFlags: 0
