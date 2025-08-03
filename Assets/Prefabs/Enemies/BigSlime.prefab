@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 386845067839074979}
   - component: {fileID: 1808569858501784727}
   m_Layer: 7
-  m_Name: Skeleton
+  m_Name: BigSlime
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.53, y: 0.3740603, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7857697444054035673}
@@ -49,8 +49,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _movement:
-    _acceleration: 48
-    _speed: 3.5
+    _acceleration: 40
+    _speed: 2
     _rigidbody: {fileID: 9148417472917476283}
   _scaleWithDistance: 0
   _scaleWithDistanceOffset: 0
@@ -66,7 +66,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.8
+  m_Mass: 20
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -129,13 +129,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3abb9fcceaadb9e479951543277e7d4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  starthealth: 100
-  damagetoplayer: 5
+  starthealth: 800
+  damagetoplayer: 15
   popup: {fileID: 2120227304558949165, guid: 6d3b60096f84f0b49a4cec5e70082d48, type: 3}
   pickup: {fileID: 7450918006906196047, guid: aa4aebac82f43064d868e241f33a5368, type: 3}
   _invincible: 0
   _boss: 0
-  _hitFXFlash: {fileID: 5088848747152249047, guid: fe324d395e58c9d4a8b22b9d60d80f5b, type: 3}
+  _hitFXFlash: {fileID: 5088848747152249047, guid: 41d5a9afc166b014a9a6da8540a6faad, type: 3}
 --- !u!1 &8117702710614671103
 GameObject:
   m_ObjectHideFlags: 0
@@ -146,7 +146,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7857697444054035673}
   - component: {fileID: 5134281075740729662}
-  - component: {fileID: 5926813020415658568}
+  - component: {fileID: 3379238457256628137}
+  - component: {fileID: 1468709210298046895}
+  - component: {fileID: 5725732902248698658}
   m_Layer: 7
   m_Name: Graphic
   m_TagString: Untagged
@@ -212,7 +214,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 6402978207049665549, guid: efaf70ed546f0224fbb30b6358c31776, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d35b3f360c166ad4aacacc578e01b0e4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -223,7 +225,48 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5926813020415658568
+--- !u!95 &3379238457256628137
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8117702710614671103}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 096f12bff2140f44c87ff962b17dd441, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!320 &1468709210298046895
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8117702710614671103}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 4c509232dac9859438d882c62e7e096b, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 1
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: -167840455792451891, guid: 4c509232dac9859438d882c62e7e096b, type: 2}
+    value: {fileID: 3379238457256628137}
+  m_ExposedReferences:
+    m_References: []
+--- !u!114 &5725732902248698658
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -232,18 +275,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8117702710614671103}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2601185751fd209468f65443a876706d, type: 3}
+  m_Script: {fileID: 11500000, guid: 281c884c874ea8446aa60d32864ba44b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _angle: 3
-  _offset: 0.2
-  _speed: 4
-  _roughness: 30000
-  _roughnessMin: 30000
-  _flippable: 1
-  _flipCooldown: 0.0625
-  _constant: 0
-  _rigidbody: {fileID: 9148417472917476283}
-  _stepSoundSpacing: 0
-  _stepSoundOffset: 0
-  _stepSoundSource: {fileID: 0}
+  _director: {fileID: 1468709210298046895}

@@ -10,14 +10,15 @@ namespace Survivor
     {
         private int wavesize = 10;
         public float waveinterval = 0f;
-        private int[] bigwaves = new int[] { 30, 12, 20, 200,200};
-        private int[] wavesizes = new int[] { 5, 3, 10, 6,6 };
-        private int[] intervals = new int[] { 10, 6, 14, 9,9 };
+        private int[] bigwaves = new int[] { 60, 12, 70, 30, 200, 200};
+        private int[] wavesizes = new int[] { 10, 6, 12, 15, 5, 5 };
+        private int[] intervals = new int[] { 4, 6, 5, 10, 5, 5 };
 
         [SerializeField] GameObject Enemy1;
         [SerializeField] GameObject Enemy2;
         [SerializeField] GameObject Enemy3;
         [SerializeField] GameObject Enemy4;
+        [SerializeField] GameObject Enemy5;
 
 
 
@@ -80,9 +81,9 @@ namespace Survivor
 
                     */
 
-                    if (iteration == 4)
+                    if (iteration == 5)
                     {
-                        iteration = 3;
+                        iteration = 4;
                     }
 
                     enemycount = bigwaves[iteration];
@@ -100,9 +101,27 @@ namespace Survivor
                         {
                             currentEnemy = Enemy3;
                         }
-                        
-                           
-                        
+                        else
+                        {
+                            if (iteration == 3)
+                            {
+                                currentEnemy = Enemy4;
+                            }
+                            else
+                            {
+                                if (iteration == 4)
+                                {
+                                    currentEnemy = Enemy5;
+                                }
+
+
+
+                            }
+
+
+                        }
+
+
                     }
                     
 
