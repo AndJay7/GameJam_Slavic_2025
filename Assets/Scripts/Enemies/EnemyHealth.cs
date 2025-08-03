@@ -22,6 +22,8 @@ public class EnemyHealth : MonoBehaviour, IHealth
     
     [SerializeField]
     private GameObject _hitFXFlash;
+    [SerializeField]
+    private AudioSource _hitSFX;
 
     private float _maxHealth;
 
@@ -61,6 +63,9 @@ public class EnemyHealth : MonoBehaviour, IHealth
         
         if (damage > 0)
         {
+            if (_hitSFX != null)
+                _hitSFX.Play();
+            
             Instantiate(_hitFXFlash, GetComponentInChildren<SpriteRenderer>().transform);
         }
         
