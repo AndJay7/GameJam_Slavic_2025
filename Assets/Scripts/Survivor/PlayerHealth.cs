@@ -14,6 +14,21 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField]
     private Transform _healthBar;
 
+    [SerializeField]
+    private float _hitCooldownOnActivate;
+    [SerializeField]
+    private float _hitCooldownDamageDecrement;
+    [SerializeField]
+    private Vector2 _hitFXPosition;
+    [SerializeField]
+    private Vector2 _hitFXRandomPosition;
+    [SerializeField]
+    private GameObject _hitFX;
+    [SerializeField]
+    private GameObject _hitFXFlash;
+
+    private float _hitCooldown;
+    
     private void Awake()
     {
         health = visibleHealth = maxHealth;
@@ -27,6 +42,8 @@ public class PlayerHealth : MonoBehaviour
         {
             _healthBar.localScale = new Vector3(Mathf.Max(0f, visibleHealth / maxHealth), 1f, 1f);
         }
+
+        _hitCooldown -= Time.deltaTime;
     }
 
     void FixedUpdate()
@@ -56,6 +73,23 @@ public class PlayerHealth : MonoBehaviour
 
     public void AddHealth(float addHealth)
     {
+        if (addHealth < 0)
+        {
+            _hitCooldown /= 1f + addHealth * addHealth * _hitCooldownDamageDecrement;
+                
+            if (_hitCooldown <= 0f)
+            {
+                var hitFXPosition = (Vector2)transform.position + _hitFXPosition;
+                hitFXPosition.x += Random.Range(-_hitFXRandomPosition.x, _hitFXRandomPosition.x);
+                hitFXPosition.y += Random.Range(-_hitFXRandomPosition.y, _hitFXRandomPosition.y);
+                
+                Instantiate(_hitFX, hitFXPosition, Quaternion.identity);
+                Instantiate(_hitFXFlash, GetComponentInChildren<SpriteRenderer>().transform);
+
+                _hitCooldown = _hitCooldownOnActivate;
+            }
+        }
+        
         health += addHealth;
         health = Mathf.Clamp(health, 0, maxHealth);
 

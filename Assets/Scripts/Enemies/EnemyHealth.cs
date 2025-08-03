@@ -19,6 +19,9 @@ public class EnemyHealth : MonoBehaviour, IHealth
 
     [SerializeField]
     private bool _boss;
+    
+    [SerializeField]
+    private GameObject _hitFXFlash;
 
     private float _maxHealth;
 
@@ -55,6 +58,11 @@ public class EnemyHealth : MonoBehaviour, IHealth
     {
         if(_invincible)
             return;
+        
+        if (damage > 0)
+        {
+            Instantiate(_hitFXFlash, GetComponentInChildren<SpriteRenderer>().transform);
+        }
         
         starthealth -= damage;
 
