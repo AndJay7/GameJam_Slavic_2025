@@ -25,7 +25,7 @@ public class WinScreenUI : MonoBehaviour
 
     private void OnButtonPress(InputControl obj)
     {
-        if (Time.time - _startTime < 2)
+        if (Time.time - _startTime < 1)
             return;
 
         if (obj.device is Mouse)
