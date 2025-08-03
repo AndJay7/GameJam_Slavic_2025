@@ -9,6 +9,8 @@ public class Chest : MonoBehaviour
 {
     [SerializeField]
     private PlayableDirector _pickupTL;
+    [SerializeField]
+    private AudioSource _pickItemAudio;
 
     private bool _pickedUp = false;
     private Item _item;
@@ -38,7 +40,7 @@ public class Chest : MonoBehaviour
     public void FinishPickup()
     {
         GameManager.Instance.ItemsQueue.Enqueue(_item);
-
+        _pickItemAudio.Play();
         Destroy(gameObject);
     }
 }

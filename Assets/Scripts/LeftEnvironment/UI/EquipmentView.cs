@@ -6,6 +6,10 @@ using UnityEngine;
 public class EquipmentView : MonoBehaviour
 {
     [SerializeField]
+    private AudioSource _audioItemSwap;
+    [SerializeField]
+    private AudioSource _audioItemSelect;
+    [SerializeField]
     private Transform _focusPoint;
     [SerializeField]
     private Transform _itemContainer;
@@ -50,6 +54,7 @@ public class EquipmentView : MonoBehaviour
 
     private void SwapItems(Vector2Int startIndex, Vector2Int endIndex)
     {
+        _audioItemSwap.Play();
         AddItem(startIndex);
         AddItem(endIndex);
     }
@@ -62,6 +67,7 @@ public class EquipmentView : MonoBehaviour
     private void SelectItem(Vector2Int index)
     {
         _itemSlots[index.x, index.y].SetSelection(true);
+        _audioItemSelect.Play();
     }
 
     private void AddItem(Vector2Int index)
