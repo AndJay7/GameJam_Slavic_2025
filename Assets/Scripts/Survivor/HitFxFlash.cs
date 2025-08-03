@@ -13,6 +13,8 @@ namespace Survivor
         private SpriteRenderer _spriteRenderer;
         [SerializeField]
         private AnimationCurve _curve;
+        [SerializeField]
+        private AudioSource _sound;
         
         private float _startTime;
         private SpriteRenderer _parent;
@@ -21,6 +23,9 @@ namespace Survivor
         {
             _startTime = Time.time;
             _parent = GetComponentInParent<SpriteRenderer>();
+            
+            if(_sound != null)
+                _sound.Play();
         }
 
         private void LateUpdate()
@@ -31,7 +36,7 @@ namespace Survivor
             _spriteRenderer.sprite = _parent.sprite;
             _spriteRenderer.flipX = _parent.flipX;
             
-            if(delta > _curve.length)
+            if(delta > _curve.length && (_sound == null || !_sound.isPlaying))
                 Destroy(gameObject);
         }
     }

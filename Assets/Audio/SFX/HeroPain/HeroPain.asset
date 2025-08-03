@@ -1,0 +1,181 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1233149941 &-8384267256101560219
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Player_Pain_12_{-8384267256101560219}
+  m_AudioClip: {fileID: 8300000, guid: 2fc6ae777840afc41a9a4635fe4d569d, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-7596955789979258055
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Player_Pain_02_{-7596955789979258055}
+  m_AudioClip: {fileID: 8300000, guid: 51ee7c7eefd99cc4bab524c035259289, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-4879819481732879289
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Player_Pain_13_{-4879819481732879289}
+  m_AudioClip: {fileID: 8300000, guid: 6e2f7b341943ed447b0e6a4b45f6cdd4, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-4413159098081306811
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Player_Pain_04_{-4413159098081306811}
+  m_AudioClip: {fileID: 8300000, guid: ac685c124f0edbb4da24e8d6809d1f16, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-611157706575727267
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Player_Pain_10_{-611157706575727267}
+  m_AudioClip: {fileID: 8300000, guid: de48e1539b7df9540bc9c80038d3f56a, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &1236257008772678882
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Player_Pain_11_{1236257008772678882}
+  m_AudioClip: {fileID: 8300000, guid: 4de904b529329e144a070c23f94427db, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &2061700164474067847
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Player_Pain_07_{2061700164474067847}
+  m_AudioClip: {fileID: 8300000, guid: bb78b99332345634788c59da85684ca1, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &2291952487081252828
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Player_Pain_03_{2291952487081252828}
+  m_AudioClip: {fileID: 8300000, guid: 6a77aeb236a79f84f9b35d8668937e52, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &4480473960218253790
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Player_Pain_09_{4480473960218253790}
+  m_AudioClip: {fileID: 8300000, guid: 35d9c99ad145993428046a6d5559e541, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &5894738292048745672
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Player_Pain_01_{5894738292048745672}
+  m_AudioClip: {fileID: 8300000, guid: df6d4933a57ccbe4592ddf9b1d84435d, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &6362500613555933039
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Player_Pain_06_{6362500613555933039}
+  m_AudioClip: {fileID: 8300000, guid: 79ac95e34260b1d4cab7d3e996246f7b, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1307931743 &6418180475301049370
+AudioRandomContainer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: HeroPain
+  m_Volume: 0
+  m_Pitch: 0
+  m_AutomaticTriggerTime: 0
+  m_LoopCount: 1
+  m_VolumeRandomizationRange: {x: -2.0560741, y: 0}
+  m_PitchRandomizationRange: {x: 0, y: 0}
+  m_AutomaticTriggerTimeRandomizationRange: {x: 0, y: 0}
+  m_LoopCountRandomizationRange: {x: 0, y: 0}
+  m_Elements:
+  - {fileID: 8873869381085088760}
+  - {fileID: 5894738292048745672}
+  - {fileID: -7596955789979258055}
+  - {fileID: 2291952487081252828}
+  - {fileID: -4413159098081306811}
+  - {fileID: 7937826377475779721}
+  - {fileID: 6362500613555933039}
+  - {fileID: 2061700164474067847}
+  - {fileID: 6865744834547827787}
+  - {fileID: 4480473960218253790}
+  - {fileID: -611157706575727267}
+  - {fileID: 1236257008772678882}
+  - {fileID: -8384267256101560219}
+  - {fileID: -4879819481732879289}
+  m_AvoidRepeatingLast: 4
+  m_PlaybackMode: 2
+  m_TriggerMode: 0
+  m_AutomaticTriggerMode: 1
+  m_LoopMode: 2
+  m_VolumeRandomizationEnabled: 1
+  m_PitchRandomizationEnabled: 0
+  m_AutomaticTriggerTimeRandomizationEnabled: 0
+  m_LoopCountRandomizationEnabled: 0
+--- !u!1233149941 &6865744834547827787
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Player_Pain_08_{6865744834547827787}
+  m_AudioClip: {fileID: 8300000, guid: 1eaa22cd8e3f398448387966e0f44676, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &7937826377475779721
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Player_Pain_05_{7937826377475779721}
+  m_AudioClip: {fileID: 8300000, guid: 1dcc9492feb269a4588e3959b6ddd54b, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &8873869381085088760
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Player_Pain_00_{8873869381085088760}
+  m_AudioClip: {fileID: 8300000, guid: 5211a3032855c604395a4c6a35c17b01, type: 3}
+  m_Volume: 0
+  m_Enabled: 1

@@ -135,7 +135,7 @@ MonoBehaviour:
   pickup: {fileID: 7450918006906196047, guid: aa4aebac82f43064d868e241f33a5368, type: 3}
   _invincible: 0
   _boss: 0
-  _hitFXFlash: {fileID: 7584320480586258975, guid: 7bcb925ef3a31c1468b438afd392e425, type: 3}
+  _hitFXFlash: {fileID: 5088848747152249047, guid: fe324d395e58c9d4a8b22b9d60d80f5b, type: 3}
 --- !u!1 &8117702710614671103
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,3 +244,6 @@ MonoBehaviour:
   _flipCooldown: 0.0625
   _constant: 0
   _rigidbody: {fileID: 9148417472917476283}
+  _stepSoundSpacing: 0
+  _stepSoundOffset: 0
+  _stepSoundSource: {fileID: 0}
