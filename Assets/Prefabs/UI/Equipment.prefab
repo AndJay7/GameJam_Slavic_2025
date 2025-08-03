@@ -563,8 +563,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2331d0fc0f8577d4a9d5c3f7328e3480, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioItemSwap: {fileID: 0}
-  _audioItemSelect: {fileID: 0}
+  _audioItemSwap: {fileID: 5797932848065758838}
+  _audioItemSelect: {fileID: 152439723740856145}
   _focusPoint: {fileID: 2373848302019029823}
   _itemContainer: {fileID: 1838553099565908369}
   _itemSlotPrefab: {fileID: 4971914840568031716, guid: e04f643365adb4d4ebd523e2f4186ef0, type: 3}
