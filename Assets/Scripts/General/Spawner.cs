@@ -12,7 +12,7 @@ namespace Survivor
         public float waveinterval = 0f;
         private int[] bigwaves = new int[] { 30, 12, 70, 30, 200, 200};
         private int[] wavesizes = new int[] { 5, 6, 12, 15, 5, 5 };
-        private int[] intervals = new int[] { 4, 6, 5, 10, 5, 5 };
+        private int[] intervals = new int[] { 4, 6, 5, 10, 7, 7 };
 
         [SerializeField] GameObject Enemy1;
         [SerializeField] GameObject Enemy2;

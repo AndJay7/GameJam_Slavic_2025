@@ -5,16 +5,17 @@ using UnityEngine;
 public class Itemspawner : MonoBehaviour
 {
 
-    public float itemtimer = 4f;
+    public float itemtimer = 10f;
 
     public int itemstospawn = 0;
 
+    private float realtimer;
 
     public static Itemspawner Instance { get; private set; }
 
     private void Awake()
     {
-
+        realtimer = itemtimer;
         Instance = this;
 
     }
@@ -32,9 +33,9 @@ public class Itemspawner : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (itemtimer > 0) 
+        if (realtimer > 0) 
         {
-            itemtimer -= Time.fixedDeltaTime;
+            realtimer -= Time.fixedDeltaTime;
                
                 
         }
@@ -42,7 +43,7 @@ public class Itemspawner : MonoBehaviour
         {
             itemstospawn++;
             //Debug.Log(itemstospawn);
-            itemtimer = 4f;
+            realtimer = itemtimer;
 
         }
         

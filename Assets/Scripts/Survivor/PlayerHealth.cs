@@ -68,7 +68,7 @@ public class PlayerHealth : MonoBehaviour
     { 
 
       if (collision.gameObject.tag == "projectile")
-            AddHealth(-20); 
+            AddHealth(-40); 
     }
 
     public void AddHealth(float addHealth)

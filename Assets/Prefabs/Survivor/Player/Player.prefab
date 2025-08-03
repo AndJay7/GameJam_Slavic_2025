@@ -321,7 +321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57386f6fcbc4a634cb5d27fff91a08cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1000
+  maxHealth: 800
   _healthBar: {fileID: 775719364864466504}
   _hitCooldownOnActivate: 2
   _hitCooldownDamageDecrement: 1
@@ -345,7 +345,7 @@ MonoBehaviour:
   Playerlocation: {x: 0, y: 0}
   _movement:
     _acceleration: 96
-    _speed: 5
+    _speed: 7
     _rigidbody: {fileID: 5996355916806543169}
 --- !u!50 &5996355916806543169
 Rigidbody2D:
