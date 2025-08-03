@@ -24,8 +24,12 @@ public class WinScreenUI : MonoBehaviour
 
     private void OnButtonPress(InputControl obj)
     {
+        if (obj.device is Mouse)
+            return;
+
         _checkDeviceCall.Dispose();
         _checkDeviceCall = null;
+
         SceneManager.LoadScene(_gameSceneName, LoadSceneMode.Single);
     }
 }

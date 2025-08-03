@@ -28,4 +28,11 @@ public class ItemsQueue
     {
         return Items.Count > 0;
     }
+
+    internal void Dispose()
+    {
+        Items.Clear();
+        OnItemAdded = null;
+        OnItemRemoved = null;
+    }
 }

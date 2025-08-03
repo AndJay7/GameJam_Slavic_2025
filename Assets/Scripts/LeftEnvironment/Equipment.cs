@@ -37,6 +37,18 @@ public class Equipment
         }
     }
 
+    internal void Dispose()
+    {
+        foreach(var slot in _itemSlots)
+        {
+            if (slot.item is Weapon w)
+            {
+                w.Ability.Stop();
+                w.Ability.RemoveAllBoosters();
+            }
+        }
+    }
+
     public void SelectItem()
     {
         _selectionIndex = _focusIndex;
