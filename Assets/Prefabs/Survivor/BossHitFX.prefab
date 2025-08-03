@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 7429318901695147613}
     - target: {fileID: 7584320480586258975, guid: 7bcb925ef3a31c1468b438afd392e425, type: 3}
       propertyPath: m_Name
-      value: SkullHitFX
+      value: BossHitFX
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -80,7 +80,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 3445020508924189437, guid: 2f87a393b323dcb42acfdb7464c721ff, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 6418180475301049370, guid: 0d571e3337be7ac43aabc78998eed792, type: 2}
+  m_Resource: {fileID: 6418180475301049370, guid: 69c94451916dca04e858178014671eb9, type: 2}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
