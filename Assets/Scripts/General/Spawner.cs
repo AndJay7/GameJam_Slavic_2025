@@ -10,7 +10,9 @@ namespace Survivor
     {
         private int wavesize = 10;
         public float waveinterval = 0f;
-        private int[] bigwaves = new int[] { 30, 12, 70, 30, 200, 200};
+
+        //private int[] bigwaves = new int[] { 1, 1, 1, 1, 1, 1};
+        private int[] bigwaves = new int[] { 30, 12, 70, 30, 20, 20};
         private int[] wavesizes = new int[] { 5, 6, 12, 15, 5, 5 };
         private int[] intervals = new int[] { 4, 6, 5, 10, 7, 7 };
 
@@ -36,6 +38,8 @@ namespace Survivor
         private GameObject currentEnemy;
 
 
+        private bool stopnormal = false;
+
         void Awake()
         {
             currentEnemy = Enemy1;
@@ -45,98 +49,133 @@ namespace Survivor
         // Update is called once per frame
         void FixedUpdate()
         {
-            if (waveinterval > 0)
+            if (stopnormal == false)
             {
-                waveinterval -= Time.fixedDeltaTime;
+
+
+                if (waveinterval > 0)
+                {
+                    waveinterval -= Time.fixedDeltaTime;
+
+                }
+                else
+                {
+
+
+
+                    StartCoroutine(Burst(wavesize, currentEnemy));
+
+                    waveinterval = intervals[iteration];
+
+                    enemycount -= wavesize;
+
+                    if (enemycount <= 0)
+                    {
+                        iteration++;
+                        /*
+
+                        ////////////////////////////////////////////////
+                        if (iteration == 3)
+                        {
+                            Destroy(this);
+                        }
+                        else
+                        {
+                            enemycount = bigwaves[iteration];
+                            wavesize = wavesizes[iteration];
+
+                        }
+                        /////////////////////////////////////////////////
+
+                        */
+
+                        if (iteration == 5)
+                        {
+                            stopnormal = true;
+                        }
+
+                        enemycount = bigwaves[iteration];
+                        wavesize = wavesizes[iteration];
+
+
+
+                        if (iteration == 1)
+                        {
+                            currentEnemy = Enemy2;
+                        }
+                        else
+                        {
+                            if (iteration == 2)
+                            {
+                                currentEnemy = Enemy3;
+                            }
+                            else
+                            {
+                                if (iteration == 3)
+                                {
+                                    currentEnemy = Enemy4;
+                                }
+                                else
+                                {
+                                    if (iteration == 4)
+                                    {
+                                        currentEnemy = Enemy5;
+                                    }
+
+
+
+                                }
+
+
+                            }
+
+
+                        }
+
+
+
+
+
+
+
+
+
+
+
+                    }
+
+                }
+
+
+
+
 
             }
             else
             {
-
-
-
-                StartCoroutine(Burst(wavesize, currentEnemy));
-
-                waveinterval = intervals[iteration];
-
-                enemycount -= wavesize;
-
-                if (enemycount <= 0)
+                if (waveinterval > 0)
                 {
-                    iteration++;
-                    /*
-
-                    ////////////////////////////////////////////////
-                    if (iteration == 3)
-                    {
-                        Destroy(this);
-                    }
-                    else
-                    {
-                        enemycount = bigwaves[iteration];
-                        wavesize = wavesizes[iteration];
-
-                    }
-                    /////////////////////////////////////////////////
-
-                    */
-
-                    if (iteration == 5)
-                    {
-                        iteration = 4;
-                    }
-
-                    enemycount = bigwaves[iteration];
-                    wavesize = wavesizes[iteration];
-
-
-
-                    if (iteration == 1)
-                    {
-                        currentEnemy = Enemy2;
-                    }
-                    else
-                    {
-                        if (iteration == 2)
-                        {
-                            currentEnemy = Enemy3;
-                        }
-                        else
-                        {
-                            if (iteration == 3)
-                            {
-                                currentEnemy = Enemy4;
-                            }
-                            else
-                            {
-                                if (iteration == 4)
-                                {
-                                    currentEnemy = Enemy5;
-                                }
-
-
-
-                            }
-
-
-                        }
-
-
-                    }
-                    
-
-
-
-
-
-
-
-
-
+                    waveinterval -= Time.fixedDeltaTime;
 
                 }
-                
+                else
+                {
+                    StartCoroutine(Burst(6, Enemy1));
+                    StartCoroutine(Burst(3, Enemy2));
+                    StartCoroutine(Burst(8, Enemy3));
+                    StartCoroutine(Burst(2, Enemy4));
+                    StartCoroutine(Burst(3, Enemy5));
+
+                    waveinterval = 10f;
+                }
+
+
+
+
             }
+
+
+
         }
 
 
