@@ -59,7 +59,7 @@ public class EnemyHealth : MonoBehaviour, IHealth
         if(_invincible)
             return;
         
-        if (damage > 0)
+        if (damage > 0 && _hitFXFlash != null)
         {
             Instantiate(_hitFXFlash, GetComponentInChildren<SpriteRenderer>().transform);
         }
