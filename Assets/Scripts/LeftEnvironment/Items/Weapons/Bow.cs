@@ -25,9 +25,10 @@ public class BowAbility : Ability
     [SerializeField] float size = 1f;
     [SerializeField] int repeats = 0;
 
-    private int layerMask = 1 << 8;
+    private int layerMask;
 
     private Quaternion extrarotation;
+    private Vector2 direction = Vector2.left;
 
     private int iter;
 
@@ -46,6 +47,7 @@ public class BowAbility : Ability
 
     public override void Activate()
     {
+        layerMask = LayerMask.GetMask("Dupa", "RightPlayer");
         tokenSource?.Cancel();
         tokenSource = new CancellationTokenSource();
         StartLoop(tokenSource.Token).Forget();
@@ -62,29 +64,36 @@ public class BowAbility : Ability
 
         while (!cancellationToken.IsCancellationRequested)
         {
-            float shortestDistance = Mathf.Infinity;
-            Vector2 shortestDirection = Vector2.zero;
+            Vector2 direction = Vector2.left;
             int angle = 0;
             while (angle < 361)
             {
-                Vector2 direction = new Vector2(Mathf.Sin(angle * Mathf.PI / 180), Mathf.Cos(angle * Mathf.PI / 180));
-                RaycastHit2D hit = Physics2D.Raycast(PlayerMovement.Instance.Playerlocation, direction, 30f, layerMask);
+                var playerPos = PlayerMovement.Instance.Playerlocation;
+                var shortestDist = new Vector2(Mathf.Infinity, Mathf.Infinity);
+                Collider2D closestCollider = null;
 
-                if (hit.collider != null)
+                Collider2D[] colliders = Physics2D.OverlapCircleAll(playerPos, 30f, layerMask);
+
+                foreach (var collider in colliders)
                 {
-                    if (hit.distance < shortestDistance)
+                    var dist = (playerPos - (Vector2)collider.transform.position);
+                    if (shortestDist.sqrMagnitude > dist.sqrMagnitude)
                     {
-                        shortestDistance = hit.distance;
-                        shortestDirection = direction;
+                        shortestDist = dist;
+                        closestCollider = collider;
                     }
                 }
 
+                if (closestCollider != null)
+                {
+                    direction = shortestDist.normalized;
+                }
 
                 angle += 15;
             }
             //Debug.Log($"Closest hit at distance {shortestDistance} in direction {shortestDirection}");
 
-            Quaternion rotation = Quaternion.FromToRotation(Vector2.right, shortestDirection);
+            Quaternion rotation = Quaternion.FromToRotation(Vector2.right, direction);
 
 
             int realrepeat = repeats;
@@ -98,17 +107,17 @@ public class BowAbility : Ability
 
 
 
-                if (realrepeat == 0)
+            if (realrepeat == 0)
             {
                 float realsize = size;
                 float realdamage = damage;
-                
+
 
                 foreach (Booster booster in _boosters)
                 {
                     realsize = booster.GetModifiedSize(realsize);
                     realdamage = booster.GetModifiedStrength(realdamage);
-                    
+
 
                 }
 
@@ -128,7 +137,7 @@ public class BowAbility : Ability
 
 
 
-                float extraangle = Vector2.SignedAngle(Vector2.right, shortestDirection);
+                float extraangle = Vector2.SignedAngle(Vector2.right, direction);
                 extraangle -= maxangle;
 
                 //extrarotation = Quaternion.Euler(0f, 0f, extraangle);
@@ -143,13 +152,13 @@ public class BowAbility : Ability
 
                     float realsize = size;
                     float realdamage = damage;
-                    
+
 
                     foreach (Booster booster in _boosters)
                     {
                         realsize = booster.GetModifiedSize(realsize);
                         realdamage = booster.GetModifiedStrength(realdamage);
-                        
+
 
                     }
 
@@ -181,7 +190,7 @@ public class BowAbility : Ability
                 realcooldown = booster.GetModifiedSpawnRate(realcooldown);
             }
 
-            await UniTask.Delay((int)(realcooldown * 1000),cancellationToken: cancellationToken);
+            await UniTask.Delay((int)(realcooldown * 1000), cancellationToken: cancellationToken);
         }
 
 
