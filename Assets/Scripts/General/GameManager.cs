@@ -38,8 +38,10 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
-    private void OnDestroy()
+    protected override void OnDestroy()
     {
+        base.OnDestroy();
+
         ItemsQueue.Dispose();
         Equipment.Dispose();
     }

@@ -8,7 +8,7 @@ using System.Threading;
 [System.Serializable]
 public class Bow : Weapon<BowAbility>
 {
-    public override Item Clone()
+    protected override Item CloneInternal()
     {
         var weapon = new Bow();
         weapon.Ability = Ability.Clone();

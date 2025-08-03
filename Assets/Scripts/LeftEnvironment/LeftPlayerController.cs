@@ -26,6 +26,13 @@ public class LeftPlayerController : MonoBehaviour
         UpdatePlayerMovementAsync(this.destroyCancellationToken).Forget();
     }
 
+    private void OnDestroy()
+    {
+        _leftPlayerInput.Main.Select.performed -= OnLeftPlayerSelect;
+        _leftPlayerInput.Main.Add.performed -= OnLeftPlayerAdd;
+        _leftPlayerInput.Main.Clear.performed -= OnLeftPlayerClear;
+    }
+
     private void OnLeftPlayerClear(InputAction.CallbackContext obj)
     {
         if (!obj.performed)

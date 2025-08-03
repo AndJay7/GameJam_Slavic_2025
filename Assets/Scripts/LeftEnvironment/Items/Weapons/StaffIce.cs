@@ -9,7 +9,7 @@ using UnityEngine.Animations;
 [System.Serializable]
 public class StaffIce : Weapon<StaffIceAbility>
 {
-    public override Item Clone()
+    protected override Item CloneInternal()
     {
         var weapon = new StaffIce();
         weapon.Ability = Ability.Clone();

@@ -26,7 +26,7 @@ public class Booster : Item
     public float GetModifiedSize(float value) => _sizeModifier.Evaluate(value);
     public float GetModifiedDuration(float value) => _durationModifier.Evaluate(value);
 
-    public override Item Clone()
+    protected override Item CloneInternal()
     {
         var newBooster = new Booster();
         newBooster._spawnRateModifier = _spawnRateModifier;
