@@ -846,9 +846,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Gamepad (X) / Keyboard (Q) - Place item in backpack
+  m_text: 'Gamepad (A) / Keyboard (Q) - Place item in backpack
 
-    Gamepad (A) /
+    Gamepad (X) /
     Keyboard (Space) - Select/Swap items in backpack'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f58b84e1ad4d6fb45b76205b0d2c13dc, type: 2}
