@@ -45,7 +45,7 @@ public class DealDamage : MonoBehaviour
         if (continous == true)
         {
             
-            if (collision.gameObject.tag == "enemy")
+            if (collision.gameObject.tag == "enemy" || collision.gameObject.tag == "boss")
             {
                 if (skip == 0)
                 {

@@ -16,7 +16,7 @@ MonoBehaviour:
     _icon: {fileID: -558633908, guid: b002caccf378428498db4f07a28df13a, type: 3}
     _name: Rune of Refresh
     _description: Cooldown of near weapon is reduced twice
-    _weight: 1
+    _weight: 0.7
     _spawnRateModifier:
       _operatorIndex: 2
       _value: 0.5
