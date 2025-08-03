@@ -13,8 +13,8 @@ public class ItemsQueue
     public void Enqueue(Item item)
     {
         var itemInstance = item.Clone();
-        Items.Enqueue(item);
-        OnItemAdded?.Invoke(item);
+        Items.Enqueue(itemInstance);
+        OnItemAdded?.Invoke(itemInstance);
     }
 
     public Item Dequeue()
@@ -27,5 +27,12 @@ public class ItemsQueue
     public bool CanDequeue()
     {
         return Items.Count > 0;
+    }
+
+    internal void Dispose()
+    {
+        Items.Clear();
+        OnItemAdded = null;
+        OnItemRemoved = null;
     }
 }

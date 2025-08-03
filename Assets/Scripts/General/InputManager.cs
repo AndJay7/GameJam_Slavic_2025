@@ -16,6 +16,7 @@ public class InputManager : Singleton<InputManager>
 
     private InputUser _leftUser;
     private InputUser _rightUser;
+    protected override bool DontDestroy => true;
 
     public event Action OnLeftPlayerConnected;
     public event Action OnRightPlayerConnected;

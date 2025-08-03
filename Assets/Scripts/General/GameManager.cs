@@ -16,6 +16,7 @@ public class GameManager : Singleton<GameManager>
     public ItemDatabaseSO ItemDatabase => _itemsDatabase;
     public ItemsQueue ItemsQueue { get; } = new ItemsQueue();
     public Equipment Equipment { get; } = new Equipment();
+    protected override bool DontDestroy => false;
 
     protected override void Awake()
     {
@@ -35,6 +36,14 @@ public class GameManager : Singleton<GameManager>
             Equipment.AddItem(itemSO.Item);
             Equipment.SetFocusItem(new Vector2Int(1, 0));
         }
+    }
+
+    protected override void OnDestroy()
+    {
+        base.OnDestroy();
+
+        ItemsQueue.Dispose();
+        Equipment.Dispose();
     }
 
     private void ItemSwapStart(Vector2Int startIndex, Vector2Int endIndex)

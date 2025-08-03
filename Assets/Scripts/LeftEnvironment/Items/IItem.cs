@@ -20,5 +20,16 @@ public abstract class Item
     public string Description => _description;
     public float Weight => _weight;
 
-    public abstract Item Clone();
+
+    public Item Clone()
+    {
+        var item = CloneInternal();
+        item._icon = _icon;
+        item._name = _name;
+        item._description = _description;
+        item._weight = _weight;
+        return item;
+    }
+
+    protected abstract Item CloneInternal();
 }

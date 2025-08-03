@@ -8,7 +8,7 @@ using System.Threading;
 [System.Serializable]
 public class Sword : Weapon<SwordAbility>
 {
-    public override Item Clone()
+    protected override Item CloneInternal()
     {
         var weapon = new Sword();
         weapon.Ability = Ability.Clone();
@@ -36,6 +36,9 @@ public class SwordAbility : Ability
         ability.damage = damage;
         ability.size = size;
         ability.repeats = repeats;
+        ability.index = SwordAbility.count++;
+        Debug.Log("Clone " + ability.index);
+
         return ability;
     }
 
@@ -45,10 +48,15 @@ public class SwordAbility : Ability
 
     private int right = 1;
 
+    public static int count = 0;
+
+    private int index = 0;
+
     private CancellationTokenSource tokenSource;
 
     public override void Activate()
     {
+        Debug.Log("Activate " + index);
         tokenSource?.Cancel();
         tokenSource = new CancellationTokenSource();
         StartLoop(tokenSource.Token).Forget();
@@ -60,8 +68,6 @@ public class SwordAbility : Ability
     }
     private async UniTaskVoid StartLoop(CancellationToken cancellationToken)
     {
-        //Debug.Log("BowAbility activated!");
-
         while (!cancellationToken.IsCancellationRequested)
         {
             int realrepeat = repeats;

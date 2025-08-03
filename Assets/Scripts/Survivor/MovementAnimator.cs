@@ -27,6 +27,12 @@ namespace Survivor
         private bool _constant;
         [SerializeField]
         private Rigidbody2D _rigidbody;
+        [SerializeField]
+        private float _stepSoundSpacing;
+        [SerializeField]
+        private float _stepSoundOffset;
+        [SerializeField]
+        private AudioSource _stepSoundSource;
 
         private Vector2 _previousPosition;
         private float _previousVelocitySqrt;
@@ -52,10 +58,18 @@ namespace Survivor
                 velocity = 1f;
                 velocitySqrt = 1f;
             }
+
+            var progressStepIndex = Mathf.FloorToInt(_progress / (Mathf.PI * _stepSoundSpacing) + _stepSoundOffset);
             
             _progress += velocitySqrt * _speed * Time.deltaTime;
-            _progress %= Mathf.PI * 2f;
 
+            if (progressStepIndex != Mathf.FloorToInt(_progress / (Mathf.PI * _stepSoundSpacing) + _stepSoundOffset) && _stepSoundSource != null)
+            {
+                _stepSoundSource.Play();
+            }
+
+            _progress %= Mathf.PI * 2f;
+            
             var progressSin = Mathf.Sin(_progress);
 
             transform.localEulerAngles = new Vector3(0f, 0f, progressSin * velocitySqrt * _angle);
