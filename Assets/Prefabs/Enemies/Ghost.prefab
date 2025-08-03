@@ -50,8 +50,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _movement:
-    _acceleration: 12
-    _speed: 6
+    _acceleration: 5
+    _speed: 8
     _rigidbody: {fileID: 9148417472917476283}
   _scaleWithDistance: 0
   _scaleWithDistanceOffset: 0
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3abb9fcceaadb9e479951543277e7d4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  starthealth: 200
+  starthealth: 100
   damagetoplayer: 20
   popup: {fileID: 2120227304558949165, guid: 6d3b60096f84f0b49a4cec5e70082d48, type: 3}
   pickup: {fileID: 7450918006906196047, guid: aa4aebac82f43064d868e241f33a5368, type: 3}

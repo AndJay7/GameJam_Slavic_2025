@@ -48,8 +48,9 @@ MonoBehaviour:
   waveinterval: 0
   Enemy1: {fileID: 2134876327840926819, guid: cd46479c52478f44d8d1ed8a472cda17, type: 3}
   Enemy2: {fileID: 2134876327840926819, guid: 1ee1192067594894594117a191dafff7, type: 3}
-  Enemy3: {fileID: 2134876327840926819, guid: ec7d7b9de0d4c5b46bbeceb864a74aa4, type: 3}
-  Enemy4: {fileID: 2134876327840926819, guid: 56d21a3cb3c9c6f4a878b5ac81c3a022, type: 3}
+  Enemy3: {fileID: 2134876327840926819, guid: 56d21a3cb3c9c6f4a878b5ac81c3a022, type: 3}
+  Enemy4: {fileID: 2134876327840926819, guid: ec7d7b9de0d4c5b46bbeceb864a74aa4, type: 3}
+  Enemy5: {fileID: 2134876327840926819, guid: b29b40d0ac25dac4d8f87ed7e058b5e1, type: 3}
 --- !u!114 &636935307844264057
 MonoBehaviour:
   m_ObjectHideFlags: 0

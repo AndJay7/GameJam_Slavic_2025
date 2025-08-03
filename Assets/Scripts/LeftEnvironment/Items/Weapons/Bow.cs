@@ -25,9 +25,14 @@ public class BowAbility : Ability
     [SerializeField] float size = 1f;
     [SerializeField] int repeats = 0;
 
-    private int layerMask = 1 << 8;
+<<<<<<< Updated upstream
+    private int layerMask;
+=======
+    private int layerMask = 1 << 7;
+>>>>>>> Stashed changes
 
     private Quaternion extrarotation;
+    private Vector2 direction = Vector2.left;
 
     private int iter;
 
@@ -46,6 +51,7 @@ public class BowAbility : Ability
 
     public override void Activate()
     {
+        layerMask = LayerMask.GetMask("Dupa", "RightPlayer");
         tokenSource?.Cancel();
         tokenSource = new CancellationTokenSource();
         StartLoop(tokenSource.Token).Forget();
@@ -62,29 +68,73 @@ public class BowAbility : Ability
 
         while (!cancellationToken.IsCancellationRequested)
         {
-            float shortestDistance = Mathf.Infinity;
-            Vector2 shortestDirection = Vector2.zero;
+            Vector2 direction = Vector2.left;
             int angle = 0;
             while (angle < 361)
             {
-                Vector2 direction = new Vector2(Mathf.Sin(angle * Mathf.PI / 180), Mathf.Cos(angle * Mathf.PI / 180));
-                RaycastHit2D hit = Physics2D.Raycast(PlayerMovement.Instance.Playerlocation, direction, 30f, layerMask);
+                var playerPos = PlayerMovement.Instance.Playerlocation;
+                var shortestDist = new Vector2(Mathf.Infinity,Mathf.Infinity);
+                Collider2D closestCollider = null;
 
-                if (hit.collider != null)
+<<<<<<< Updated upstream
+                Collider2D[] colliders = Physics2D.OverlapCircleAll(playerPos, 30f, layerMask);
+
+                foreach(var collider in colliders)
+=======
+
+                if (hit == null) 
+                { 
+                Debug.Log("2D Raycast hit: " + hit.collider.gameObject.name);
+                }
+                else
                 {
+                    Debug.Log("a");
+                }
+                /*
+                Vector3 direction = new Vector3(Mathf.Sin(angle * Mathf.PI / 180), Mathf.Cos(angle * Mathf.PI / 180),0);
+                //RaycastHit hit = Physics.SphereCast(PlayerMovement.Instance.Playerlocation, 0.3f, direction, out hit, 30f, layerMask);
+                */
+
+                /*
+                if (Physics.SphereCast(PlayerMovement.Instance.Playerlocation, 1f, direction, out RaycastHit hit, 30f))
+                {
+                    Debug.Log("Hit object: " + hit.collider.gameObject.name);
+
                     if (hit.distance < shortestDistance)
                     {
                         shortestDistance = hit.distance;
                         shortestDirection = direction;
                     }
                 }
+                */
 
 
+                if (hit.collider != null)
+>>>>>>> Stashed changes
+                {
+                    var dist = (playerPos - (Vector2)collider.transform.position);
+                    if(shortestDist.sqrMagnitude > dist.sqrMagnitude)
+                    {
+                        shortestDist = dist;
+                        closestCollider = collider;
+                    }
+                }
+<<<<<<< Updated upstream
+
+                if(closestCollider != null)
+                {
+                    direction = shortestDist.normalized;
+                }
+
+=======
+                
+                
+>>>>>>> Stashed changes
                 angle += 15;
             }
             //Debug.Log($"Closest hit at distance {shortestDistance} in direction {shortestDirection}");
 
-            Quaternion rotation = Quaternion.FromToRotation(Vector2.right, shortestDirection);
+            Quaternion rotation = Quaternion.FromToRotation(Vector2.right, direction);
 
 
             int realrepeat = repeats;
@@ -128,7 +178,7 @@ public class BowAbility : Ability
 
 
 
-                float extraangle = Vector2.SignedAngle(Vector2.right, shortestDirection);
+                float extraangle = Vector2.SignedAngle(Vector2.right, direction);
                 extraangle -= maxangle;
 
                 //extrarotation = Quaternion.Euler(0f, 0f, extraangle);

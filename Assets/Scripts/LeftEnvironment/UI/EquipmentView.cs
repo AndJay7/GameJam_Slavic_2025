@@ -29,11 +29,11 @@ public class EquipmentView : MonoBehaviour
 
     private void InitializeSlots()
     {
-        var gridSize = Equipment.GridSize;
-        _itemSlots = new ItemSlotView[gridSize, gridSize];
-        for(int x = 0; x < gridSize;x++)
+        var gridSize = _gameManager.Equipment.GridSize;
+        _itemSlots = new ItemSlotView[gridSize.x, gridSize.y];
+        for(int x = 0; x < gridSize.x;x++)
         {
-            for (int y = 0; y < gridSize; y++)
+            for (int y = 0; y < gridSize.y; y++)
             {
                 var itemSlot = Instantiate(_itemSlotPrefab, _itemContainer);
                 itemSlot.transform.localPosition = new Vector3(x * _slotSize, y * _slotSize, 0);
