@@ -43,6 +43,8 @@ public class Chest : MonoBehaviour
     {
         GameManager.Instance.ItemsQueue.Enqueue(_item);
         _pickItemAudio.Play();
-        Destroy(gameObject);
+        foreach (var sprite in GetComponentsInChildren<SpriteRenderer>())
+            sprite.enabled = false;
+        Destroy(gameObject, 10f);
     }
 }
