@@ -35,6 +35,7 @@ public class Chest : MonoBehaviour
             return;
         
         _pickupTL.Play();
+        _pickItemAudio.Play();
 
         _pickedUp = true;
     }
@@ -42,7 +43,6 @@ public class Chest : MonoBehaviour
     public void FinishPickup()
     {
         GameManager.Instance.ItemsQueue.Enqueue(_item);
-        _pickItemAudio.Play();
         foreach (var sprite in GetComponentsInChildren<SpriteRenderer>())
             sprite.enabled = false;
         Destroy(gameObject, 10f);
