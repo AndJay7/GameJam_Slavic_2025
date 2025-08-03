@@ -56,6 +56,7 @@ MonoBehaviour:
   pickup: {fileID: 7450918006906196047, guid: aa4aebac82f43064d868e241f33a5368, type: 3}
   _invincible: 1
   _boss: 0
+  _hitFXFlash: {fileID: 7584320480586258975, guid: 7bcb925ef3a31c1468b438afd392e425, type: 3}
 --- !u!114 &6892383812753684261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -408,3 +409,4 @@ MonoBehaviour:
   pickup: {fileID: 7450918006906196047, guid: aa4aebac82f43064d868e241f33a5368, type: 3}
   _invincible: 0
   _boss: 1
+  _hitFXFlash: {fileID: 0}
