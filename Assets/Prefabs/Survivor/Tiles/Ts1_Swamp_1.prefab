@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4698534635657626880}
   - component: {fileID: 6851554876681173425}
   - component: {fileID: 1305521948478616589}
+  - component: {fileID: 1981987673729099707}
   m_Layer: 7
   m_Name: Ts1_Swamp_1
   m_TagString: Untagged
@@ -106,6 +107,29 @@ MonoBehaviour:
     y: 2
   _weight: 0.02
   _flippable: 1
+--- !u!114 &1981987673729099707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4540315258386194086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 188a4e2e4be051047be08d5aabd250b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _useChance: 1
+  _chance: 0.1
+  _spawnArea:
+    x: 0
+    y: 0
+  _spawnCount:
+    x: 1
+    y: 1
+  _flippable: 0
+  _props:
+  - {fileID: 4540315258386194086, guid: 3c01f120035eb7c44a257f7bc0386602, type: 3}
 --- !u!1 &4898877230134700848
 GameObject:
   m_ObjectHideFlags: 0
