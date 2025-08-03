@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1233149941 &-7462666897372484653
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SkullPain_03_{-7462666897372484653}
+  m_AudioClip: {fileID: 8300000, guid: a96ccd9025c748f459d013f26b07dc0f, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-6442663809056305635
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SkullPain_02_{-6442663809056305635}
+  m_AudioClip: {fileID: 8300000, guid: cf050084b920c6d4a866ecc6bd1da35f, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-5326965562082665781
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SkullPain_03_{-5326965562082665781}
+  m_AudioClip: {fileID: 8300000, guid: a96ccd9025c748f459d013f26b07dc0f, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-1246038780681533753
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SkullPain_03_{-1246038780681533753}
+  m_AudioClip: {fileID: 8300000, guid: a96ccd9025c748f459d013f26b07dc0f, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &2740413020101103927
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SkullPain_03_{2740413020101103927}
+  m_AudioClip: {fileID: 8300000, guid: a96ccd9025c748f459d013f26b07dc0f, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &4677993086026749268
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SkullPain_03_{4677993086026749268}
+  m_AudioClip: {fileID: 8300000, guid: a96ccd9025c748f459d013f26b07dc0f, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &5262749537078868248
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SkullPain_00_{5262749537078868248}
+  m_AudioClip: {fileID: 8300000, guid: 8b77d11b28f790046b41743f49216e4b, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1307931743 &6418180475301049370
+AudioRandomContainer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SkullPain
+  m_Volume: 0
+  m_Pitch: 0
+  m_AutomaticTriggerTime: 0
+  m_LoopCount: 1
+  m_VolumeRandomizationRange: {x: -1.8691587, y: 0}
+  m_PitchRandomizationRange: {x: -100.9346, y: 0}
+  m_AutomaticTriggerTimeRandomizationRange: {x: 0, y: 0}
+  m_LoopCountRandomizationRange: {x: 0, y: 0}
+  m_Elements:
+  - {fileID: 5262749537078868248}
+  - {fileID: 7470409357962527893}
+  - {fileID: -6442663809056305635}
+  - {fileID: -1246038780681533753}
+  - {fileID: -5326965562082665781}
+  - {fileID: 2740413020101103927}
+  - {fileID: -7462666897372484653}
+  - {fileID: 4677993086026749268}
+  m_AvoidRepeatingLast: 2
+  m_PlaybackMode: 2
+  m_TriggerMode: 0
+  m_AutomaticTriggerMode: 1
+  m_LoopMode: 2
+  m_VolumeRandomizationEnabled: 1
+  m_PitchRandomizationEnabled: 1
+  m_AutomaticTriggerTimeRandomizationEnabled: 0
+  m_LoopCountRandomizationEnabled: 0
+--- !u!1233149941 &7470409357962527893
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SkullPain_01_{7470409357962527893}
+  m_AudioClip: {fileID: 8300000, guid: 15e1431632f020048bee9f2e9ab1cdbf, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
