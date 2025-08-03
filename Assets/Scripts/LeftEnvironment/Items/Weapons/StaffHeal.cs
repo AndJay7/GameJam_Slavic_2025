@@ -9,7 +9,7 @@ using UnityEngine.Animations;
 [System.Serializable]
 public class StaffHeal : Weapon<StaffHealAbility>
 {
-    public override Item Clone()
+    protected override Item CloneInternal()
     {
         var weapon = new StaffHeal();
         weapon.Ability = Ability.Clone();
