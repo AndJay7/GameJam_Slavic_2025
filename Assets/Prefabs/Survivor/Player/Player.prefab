@@ -321,8 +321,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57386f6fcbc4a634cb5d27fff91a08cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 2000
+  maxHealth: 1000
   _healthBar: {fileID: 775719364864466504}
+  _hitCooldownOnActivate: 2
+  _hitCooldownDamageDecrement: 1
+  _hitFXPosition: {x: 0, y: 0.7}
+  _hitFXRandomPosition: {x: 0.5, y: 0.6}
+  _hitFX: {fileID: 7584320480586258975, guid: 19b88e093c2a9f54788491c52e13ea00, type: 3}
+  _hitFXFlash: {fileID: 7584320480586258975, guid: 7fa8e82bd9ab9d54aa01874f7563cb91, type: 3}
 --- !u!114 &5679628443365805981
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,6 +7,8 @@ using System;
 public class ItemQueueView : MonoBehaviour
 {
     [SerializeField]
+    private AudioSource _itemInsert;
+    [SerializeField]
     private ItemQueueSlotView _slotPrefab;
     [SerializeField]
     private Transform _itemContainer;
@@ -44,6 +46,7 @@ public class ItemQueueView : MonoBehaviour
     private void RemoveItem(Item obj)
     {
         var slot = _slots.Dequeue();
+        _itemInsert.Play();
         Destroy(slot.gameObject);
         UpdateDescription();
         UpdateSelection();

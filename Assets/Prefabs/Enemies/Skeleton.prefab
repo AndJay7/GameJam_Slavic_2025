@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9148417472917476283}
   - component: {fileID: 386845067839074979}
   - component: {fileID: 1808569858501784727}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Skeleton
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -49,9 +49,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _movement:
-    _acceleration: 200
-    _speed: 5
+    _acceleration: 48
+    _speed: 3.5
     _rigidbody: {fileID: 9148417472917476283}
+  _scaleWithDistance: 0
+  _scaleWithDistanceOffset: 0
 --- !u!50 &9148417472917476283
 Rigidbody2D:
   serializedVersion: 4
@@ -64,7 +66,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 200
+  m_Mass: 0.8
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -127,10 +129,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3abb9fcceaadb9e479951543277e7d4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  starthealth: 100
-  damagetoplayer: 5
+  starthealth: 400
+  damagetoplayer: 8
   popup: {fileID: 2120227304558949165, guid: 6d3b60096f84f0b49a4cec5e70082d48, type: 3}
   pickup: {fileID: 7450918006906196047, guid: aa4aebac82f43064d868e241f33a5368, type: 3}
+  _invincible: 0
+  _boss: 0
+  _hitFXFlash: {fileID: 7584320480586258975, guid: 7bcb925ef3a31c1468b438afd392e425, type: 3}
 --- !u!1 &8117702710614671103
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,4 +242,5 @@ MonoBehaviour:
   _roughnessMin: 30000
   _flippable: 1
   _flipCooldown: 0.0625
+  _constant: 0
   _rigidbody: {fileID: 9148417472917476283}
