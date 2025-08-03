@@ -13,8 +13,12 @@ public class GameMusicController : MonoBehaviour
     [SerializeField]
     private float _fadeTime = 1;
 
+    private float _targetVolume = 1f;
+
     private void Awake()
     {
+        _targetVolume = _gameMusic.volume;
+
         _gameMusic.volume = 0;
         _gameMusic.Play();
         AwakeAsync(this.GetCancellationTokenOnDestroy()).Forget();
@@ -27,10 +31,10 @@ public class GameMusicController : MonoBehaviour
         while (Time.time - startTime < _fadeTime && !cancellationToken.IsCancellationRequested)
         {
             var volume = (Time.time - startTime) / _fadeTime;
-            _gameMusic.volume = _fadeCurve.Evaluate(volume);
+            _gameMusic.volume = _targetVolume * _fadeCurve.Evaluate(volume);
             await UniTask.WaitForEndOfFrame(cancellationToken);
         }
-        _gameMusic.volume = 1;
+        _gameMusic.volume = _targetVolume;
     }
 
     private void OnDestroy()
